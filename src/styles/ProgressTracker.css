@@ -1,0 +1,27 @@
+.progress-tracker {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.step-indicators {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.step-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-icon > img {
+    height: 100%;
+    width: auto;
+}
+
+.step-label {
+    height: auto;
+    width: 100%;
+}
