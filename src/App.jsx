@@ -6,17 +6,17 @@ import previewIcon from './assets/icons/previewIcon.svg'
 import './App.css'
 
 const steps = [
-	{'name': 'Contact', 'icon': personIcon},
-	{'name': 'Education', 'icon': schoolIcon},
-	{'name': 'Experience', 'icon': workIcon},
-	{'name': 'Preview', 'icon': previewIcon},
+	{'label': 'Contact', 'icon': personIcon},
+	{'label': 'Education', 'icon': schoolIcon},
+	{'label': 'Experience', 'icon': workIcon},
+	{'label': 'Preview', 'icon': previewIcon},
 ]
 
 function App() {
   return (
-    <>
+    <div className='progress-tracker-wrapper'>
       <ProgressTracker steps={steps} />
-    </>
+    </div>
   )
 }
 

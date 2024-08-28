@@ -3,11 +3,11 @@ import '../styles/ProgressTracker.css'
 
 const StepMarker = ({ label, icon, isActive, isComplete }) => {
     return (
-        <div className={`step-header ${isActive ? 'step-active' : ''} ${isComplete ? 'step-complete' : ''}`}>
+        <div className={`step-marker ${isActive ? 'step-active' : ''} ${isComplete ? 'step-complete' : ''}`}>
             <div className="step-icon">
                 {icon && <img src="icon" alt="" />}
             </div>
-            <div className="step-label">{ label }</div>
+            <div className="step-label">{label}</div>
         </div>
     );
 };
