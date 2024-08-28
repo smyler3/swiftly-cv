@@ -2,6 +2,9 @@
     --step-count: 4; /* The number of steps in the stepper */
     --step-gap: 5%;
     --step-line-width: calc((var(--step-count) + 1) * var(--step-gap));
+
+    --primary: #00d1ff;
+    --light-grey: #d9d9d9;
 }
 
 .progress-tracker {
@@ -44,15 +47,18 @@
     background-color: #d9d9d9;
 }
 
-/* Add progress lines before and after each step icon */
+/* Add progress lines before and after each step header */
 .step-icon::before,
 .step-marker:last-of-type > .step-icon::after {
     position: absolute;
-    content: '';
     top: 50%;
+
     width: var(--step-line-width);
-    flex: 1;
-    border-bottom: 2px solid #00d1ff;
+    height: 2px;
+
+    content: '';
+
+    background-color: var(--light-grey);
     z-index: -1;
 }
 .step-icon::before {
@@ -72,10 +78,14 @@
 
     color: white;
     font-weight: bold;
-    background-color: #d9d9d9;
+    background-color: var(--light-grey);
 }
 
+/* Colour the step headers and connecting lines based on current step */
 .step-active > div,
-.step-complete > div {
-    background-color: #00d1ff;
+.step-complete > div,
+.step-active > .step-icon::before,
+.step-complete > .step-icon::before,
+.step-marker.step-active:last-of-type > .step-icon::after {
+    background-color: var(--primary);
 }
