@@ -5,7 +5,7 @@ const StepMarker = ({ label, icon, isActive, isComplete }) => {
     return (
         <div className={`step-marker ${isActive ? 'step-active' : ''} ${isComplete ? 'step-complete' : ''}`}>
             <div className="step-icon">
-                {icon && <img src="icon" alt="" />}
+                {icon && <img src={`${icon}`} alt="" />}
             </div>
             <div className="step-label">{label}</div>
         </div>
@@ -13,7 +13,7 @@ const StepMarker = ({ label, icon, isActive, isComplete }) => {
 };
 
 const ProgressBar = ({ currentStep, totalSteps }) => {
-    const progress = (currentStep / totalSteps) * 100;
+    const progress = ((currentStep + 1) / totalSteps) * 100;
 
     return (
         <div className="progress-bar">
@@ -23,7 +23,7 @@ const ProgressBar = ({ currentStep, totalSteps }) => {
 };
 
 const ProgressTracker = ({ steps }) => {
-    const [currentStep, setCurrentStep] = useState(0);
+    const [currentStep, setCurrentStep] = useState(2);
 
     // Render nothing if steps is empty
     if (steps.length === 0) {
