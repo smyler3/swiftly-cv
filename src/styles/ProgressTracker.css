@@ -1,7 +1,6 @@
 :root {
     --step-count: 4; /* The number of steps in the stepper */
     --gap-count: calc(var(--step-count) + 1);
-    --step-width: 60%;
 
     --primary: #00d1ff;
     --secondary: #07B8DF;
@@ -14,8 +13,8 @@
 
 .progress-tracker {
     display: grid;
-    grid-template-rows: 80% 19%;
-    gap: 5%;
+    grid-template-rows: auto auto;
+    gap: 10px;
     align-items: center;
 
     height: 100%;
@@ -39,7 +38,14 @@
     gap: 2px;
 
     height: 100%;
-    width: var(--step-width);
+    width: 100%;
+    overflow: hidden;
+}
+
+.step-icon,
+.step-label {
+    width: 99%;
+    max-width: 70px;
 }
 
 .step-icon {
@@ -48,21 +54,23 @@
     align-items: center;
     justify-content: center;
 
-    width: 100%;
     aspect-ratio: 1 / 1;
 
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: #d9d9d9;
 }
 
 .step-icon > img {
+    position: absolute;
+    object-fit: contain;
+
     height: 62%;
     width: auto;
 }
 
 /* Add progress lines before and after each step header */
 .step-icon::before,
-.step-marker:last-of-type > .step-icon::after {
+.step-icon::after {
     position: absolute;
     top: 50%;
 
@@ -77,16 +85,16 @@
 .step-icon::before {
     left: -100%;
 }
-.step-marker:last-of-type > .step-icon::after {
+.step-icon::after {
     right: -100%;
 }
 
 .step-label {
-    width: 100%;
-
     color: white;
     font-weight: bold;
+    font-size: 9pt;
     background-color: var(--light-grey);
+    overflow: hidden;
 }
 
 /* Colour the step headers and connecting lines based on current step */
@@ -94,6 +102,7 @@
 .step-complete > div,
 .step-active > .step-icon::before,
 .step-complete > .step-icon::before,
+.step-complete > .step-icon::after,
 .step-marker.step-active:last-of-type > .step-icon::after {
     background-color: var(--primary);
 }
@@ -102,15 +111,27 @@
     display: flex;
     align-items: center;
 
-    height: 100%;
+    height: 25px;
     width: 100%;
 
-    border-radius: 2% / 25%;
+    border-radius: 10px / 25%;
     background-color: var(--light-grey);
-    overflow: hidden;
+    overflow: hidden; /* Keeps edges appearing rounded as progress increases */
 }
 
 .progress {
     height: 100%;
     background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+@media screen and (max-width: 500px) {
+    .step-icon,
+    .step-label {
+        width: 99%;
+        max-width: 70px;
+    }
+
+    .step-label {
+        font-size: 9pt;
+    }
 }

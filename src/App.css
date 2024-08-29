@@ -1,4 +1,5 @@
 #root {
+    width: 100vw;
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
@@ -6,6 +7,7 @@
 }
 
 .progress-tracker-wrapper {
-    height: 150px;
-    width: 600px;
+    max-height: 300px;
+    width: 100%;
+    max-width: 1000px;
 }
