@@ -1,5 +1,6 @@
 #root {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -17,4 +18,8 @@
 
     width: 100%;
     max-width: 900px;
+}
+
+.contact-form-wrapper {
+    width: 100%;
 }
