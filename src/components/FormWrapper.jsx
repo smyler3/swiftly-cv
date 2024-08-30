@@ -5,7 +5,7 @@ const FormField = ({ label, type, name, placeholder, pattern=null }) => {
     const [value, setValue] = useState('');
 
     return (
-        <div className="form-container">
+        <div className="form-field-container">
             <label htmlFor={`${name}`}>{label}</label>
             <input 
                 type={`${type}`} 

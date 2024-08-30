@@ -1,9 +1,13 @@
 :root {
     --input-field-height: 35px;
+}
 
-    --primary: #00d1ff;
-    --light-grey: #d9d9d9;
-    --dark-grey: #767676;
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    margin-top: 60px;
 }
 
 .form {
@@ -13,7 +17,6 @@
 }
 
 .form-title {
-    margin: 60px 0 35px;
     border-bottom: 2px solid var(--primary);
 
     font-size: 30px;
@@ -21,7 +24,7 @@
     color: var(--primary);
 }
 
-.form-container {
+.form-field-container {
     display: grid;
     grid-template-rows: auto 1fr;
     justify-items: start;
@@ -39,11 +42,16 @@ input {
 
     border: 1px solid var(--light-grey);
     border-radius: 5px;
+    padding-left: 8px;
 
     /* Remove default styling */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+input:focus-visible {
+    border-color: var(--primary);
+    outline: 1px solid var(--primary);
 }
 
 input[type=textarea] {
