@@ -13,7 +13,7 @@ const ContactForm = () => {
         <div className='form-page'>
             <FormWrapper title='CONTACT DETAILS' fields={contactFormFields} />
         </div>
-        <NavigationButtons />
+        <NavigationButtons back={null}/>
         </>
     )
 }

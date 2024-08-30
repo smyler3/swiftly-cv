@@ -13,12 +13,26 @@
     align-items: center;
     justify-content: center;
 
-    padding: 10px 15px;
-
-    font-size: 20px;
-    border-radius: 2px;
+    font-size: 16px;
     border: none;
     outline: none;
+}
+
+.back-btn {
+    color: var(--light-grey);
+    background: none;
+}
+
+.fwd-btn-container {
+    width: 135px;
+}
+
+.fwd-btn {
+    padding: 5px 15px;
+    
+    color: white;
+    border-radius: 4px;
+    background-color: var(--primary);
 }
 
 .icon-wrapper {
@@ -30,14 +44,4 @@
 
 .icon-wrapper > img {
     width: 100%;
-}
-
-.back-btn {
-    color: var(--light-grey);
-    background: none;
-}
-
-.fwd-btn {
-    color: white;
-    background-color: var(--primary);
 }

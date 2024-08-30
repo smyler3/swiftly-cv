@@ -5,7 +5,7 @@ import "../styles/NavigationButtons.css";
 // Default back button paramaters
 const defaultBackBtn = {
     'icon': backArrowIcon,
-    'text': 'Back',
+    'text': 'BACK',
     'onClick': null,
     'classNames': 'nav-btn back-btn',
 }
@@ -13,7 +13,7 @@ const defaultBackBtn = {
 // Default forward button parameters
 const defaultForwardBtn = {
     'icon': null,
-    'text': 'Save & Continue',
+    'text': 'SAVE & CONTINUE',
     'onClick': null,
     'classNames': 'nav-btn fwd-btn',
 }
@@ -21,8 +21,12 @@ const defaultForwardBtn = {
 const NavigationButtons = ({ back=defaultBackBtn, forward=defaultForwardBtn }) => {
     return (
         <div className="nav-btn-wrapper">
-            <Button icon={back.icon} text={back.text} onClick={back.onClick} classNames={back.classNames}></Button>
-            <Button icon={forward.icon} text={forward.text} onClick={forward.onClick} classNames={forward.classNames}></Button>
+            <span>
+                {back && <Button icon={back.icon} text={back.text} onClick={back.onClick} classNames={back.classNames}></Button>}
+            </span>
+            <span className="fwd-btn-container">
+                <Button icon={forward.icon} text={forward.text} onClick={forward.onClick} classNames={forward.classNames}></Button>
+            </span>
         </div>
     )
 }
