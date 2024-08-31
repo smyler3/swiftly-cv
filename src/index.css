@@ -35,6 +35,10 @@ body {
   background-color: white;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

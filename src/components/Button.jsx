@@ -1,8 +1,8 @@
-const Button = ({ icon=null, text, onClick, classNames=null }) => {
+const Button = ({ icon=null, text=null, onClick=null, classNames=null }) => {
     return (
-        <button className={`${classNames ? classNames : ''}`} onClick={onClick}>
-            {icon && <span className="icon-wrapper"><img src={`${icon}`} alt=""/></span>}
-            <span className="text">{text}</span>
+        <button className={`${classNames ? classNames : ''} ${text && icon ? 'icon-and-text-btn' : ''}`} onClick={onClick}>
+            {icon && <span className="btn-icon-wrapper"><img src={`${icon}`} alt=""/></span>}
+            {text && <span className="text">{text}</span>}
         </button>
     )
 }

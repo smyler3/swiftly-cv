@@ -1,0 +1,6 @@
+.add-form-btn {
+    align-self: self-start;
+
+    font-size: 20px;
+    color: var(--primary);
+}

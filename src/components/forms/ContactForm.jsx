@@ -11,7 +11,8 @@ const ContactForm = () => {
     return (
         <>
         <div className='form-page'>
-            <FormWrapper title='CONTACT DETAILS' fields={contactFormFields} />
+            <h2 className="form-title">CONTACT DETAILS</h2>
+            <FormWrapper fields={contactFormFields} canDelete={false} />
         </div>
         <NavigationButtons back={null}/>
         </>

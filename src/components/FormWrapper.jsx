@@ -1,5 +1,15 @@
 import { useState } from "react";
 import '../styles/FormWrapper.css';
+import Button from "./Button";
+import closeIcon from "../assets/icons/closeIcon.svg"
+
+// Default delete form button paramaters
+const defaultDelFormBtn = {
+    'icon': closeIcon,
+    'text': null,
+    'onClick': null,
+    'classNames': 'del-form-btn',
+}
 
 const FormField = ({ label, type, name, placeholder, pattern=null }) => {
     const [value, setValue] = useState('');
@@ -20,10 +30,14 @@ const FormField = ({ label, type, name, placeholder, pattern=null }) => {
     );
 }
 
-const FormWrapper = ({ title, fields }) => {
+const FormWrapper = ({ fields, canDelete=true }) => {
     return (
-        <div className="form-wrapper">
-            <h2 className="form-title">{title}</h2>
+        <div className={`form-wrapper ${canDelete ? 'deleteable-form-wrapper' : ''}`}>
+            {canDelete && (
+                <span className="del-form-btn-wrapper">
+                    <Button icon={defaultDelFormBtn.icon} text={defaultDelFormBtn.text} onClick={defaultDelFormBtn.onClick} classNames={defaultDelFormBtn.classNames} />
+                </span>
+            )}
             <form action="" className="form">
                 {fields.map((field) => (
                     <FormField

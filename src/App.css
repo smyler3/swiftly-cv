@@ -22,3 +22,35 @@
 .form-page {
     width: 100%;
 }
+
+.form-title {
+    margin-top: 60px;
+    border-bottom: 2px solid var(--primary);
+
+    font-size: 30px;
+    text-align: start;
+    color: var(--primary);
+}
+
+.icon-and-text-btn {
+    gap: 10px;
+}
+
+.btn-icon-wrapper {
+    max-height: 30px;
+    max-width: 30px;
+}
+
+.btn-icon-wrapper > img {
+    width: 100%;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    outline: none;
+    background: none;
+}
