@@ -22,9 +22,7 @@ const ProgressBar = ({ currentStep, totalSteps }) => {
     );
 };
 
-const ProgressTracker = ({ steps }) => {
-    const [currentStep, setCurrentStep] = useState(0);
-
+const ProgressTracker = ({ steps, currentStep=0 }) => {
     // Render nothing if steps is empty
     if (steps.length === 0) {
         return null;

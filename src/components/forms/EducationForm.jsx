@@ -1,0 +1,26 @@
+import AddFormButton from '../AddFormButton';
+import FormWrapper from '../FormWrapper';
+import NavigationButtons from '../NavigationButtons';
+
+const educationFormFields = [
+    {'name': 'schoolName', 'label': 'School Name:', 'type': 'text', 'placeholder': 'Harvard University'},
+    {'name': 'studyTitle', 'label': 'Name of Course/Certificate:', 'type': 'text', 'placeholder': 'Bachelor of Science'},
+    {'name': 'studyScore', 'label': 'Score Recieved:', 'type': 'text', 'placeholder': 'A- (3.72)'},
+    {'name': 'studyStartDate', 'label': 'Start Date:', 'type': 'date', 'placeholder': 'dd/mm/yyyy'},
+    {'name': 'studyEndDate', 'label': 'End Date:', 'type': 'date', 'placeholder': 'dd/mm/yyyy'},
+]
+
+const EducationForm = () => {
+    return (
+        <>
+        <div className='form-page'>
+        <h2 className="form-title">EDUCATION DETAILS</h2>
+            <FormWrapper fields={educationFormFields} />
+        </div>
+        <AddFormButton text="Education" />
+        <NavigationButtons />
+        </>
+    )
+}
+
+export default EducationForm;

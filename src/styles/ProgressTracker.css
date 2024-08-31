@@ -3,10 +3,6 @@
     --gap-count: calc(var(--step-count) + 1);
 }
 
-* {
-    box-sizing: border-box;
-}
-
 .progress-tracker {
     display: grid;
     grid-template-rows: auto auto;
@@ -76,7 +72,6 @@
     content: '';
 
     background-color: var(--light-grey);
-    z-index: -1;
 }
 .step-icon::before {
     left: -100%;
