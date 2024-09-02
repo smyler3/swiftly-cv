@@ -23,6 +23,7 @@
 
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 body {
@@ -33,10 +34,6 @@ body {
   min-height: 100vh;
 
   background-color: white;
-}
-
-button {
-  cursor: pointer;
 }
 
 /* @media (prefers-color-scheme: light) {

@@ -49,6 +49,9 @@
 }
 
 label {
+    display: block;
+
+    text-align: left;
     font-size: 16px;
     font-weight: 600;
     color: var(--dark-grey);
@@ -74,4 +77,14 @@ input:focus-visible {
 
 input[type=textarea] {
     height: calc(2 * var(--input-field-height));
+}
+
+/* Allows date fields to be side by side */
+.date-field-container {
+    display: inline-block;
+
+    width: calc(50% - 10px);
+}
+.date-field-container:nth-of-type(even) {
+    margin-right: 20px;
 }
