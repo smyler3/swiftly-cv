@@ -12,7 +12,7 @@
 .deleteable-form-wrapper {
     margin-bottom: 20px;
     
-    padding-bottom: 35px;
+    padding-bottom: 19px;
     border-bottom: 2px dashed var(--dark-grey);
 }
 
@@ -34,18 +34,22 @@
     background: none;
 }
 
-.del-form-btn-wrapper > 
-
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 16px;
 }
 
 .form-field-container {
     display: grid;
     grid-template-rows: auto 1fr;
     justify-items: start;
+    grid-column: span 2;
+}
+
+.date-field-container {
+    grid-column: span 1; /* Allows date fields to be side by side */
 }
 
 label {
@@ -79,12 +83,7 @@ input[type=textarea] {
     height: calc(2 * var(--input-field-height));
 }
 
-/* Allows date fields to be side by side */
-.date-field-container {
-    display: inline-block;
-
-    width: calc(50% - 10px);
-}
-.date-field-container:nth-of-type(even) {
-    margin-right: 20px;
+.add-form-btn > .btn-icon-wrapper {
+    height: 25px;
+    width: 25px;
 }

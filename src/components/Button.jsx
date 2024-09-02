@@ -1,3 +1,5 @@
+import "../styles/Button.css"
+
 const Button = ({ icon=null, text=null, onClick=null, classNames=null }) => {
     return (
         <button className={`${classNames ? classNames : ''} ${text && icon ? 'icon-and-text-btn' : ''}`} onClick={onClick}>

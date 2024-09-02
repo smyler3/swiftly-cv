@@ -32,19 +32,6 @@
     color: var(--primary);
 }
 
-.icon-and-text-btn {
-    gap: 10px;
-}
-
-.btn-icon-wrapper {
-    max-height: 30px;
-    max-width: 30px;
-}
-
-.btn-icon-wrapper > img {
-    width: 100%;
-}
-
 button {
     display: flex;
     align-items: center;

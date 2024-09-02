@@ -1,0 +1,7 @@
+.icon-and-text-btn {
+    gap: 10px;
+}
+
+.btn-icon-wrapper > img {
+    width: 100%;
+}
