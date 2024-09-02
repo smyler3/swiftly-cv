@@ -12,7 +12,7 @@
 .deleteable-form-wrapper {
     margin-bottom: 30px;
     
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     border-bottom: 2px dashed var(--dark-grey);
 }
 
@@ -22,8 +22,8 @@
     justify-content: center;
     align-self: self-end;
 
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
 }
 
 .del-form-btn {
@@ -53,9 +53,6 @@
 }
 
 label {
-    display: block;
-
-    text-align: left;
     font-size: 16px;
     font-weight: 600;
     color: var(--dark-grey);
