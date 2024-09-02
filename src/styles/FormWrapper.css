@@ -10,9 +10,9 @@
 }
 
 .deleteable-form-wrapper {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     
-    padding-bottom: 19px;
+    padding-bottom: 25px;
     border-bottom: 2px dashed var(--dark-grey);
 }
 
