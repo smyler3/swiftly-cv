@@ -17,13 +17,22 @@ const FormField = ({ containerClassName, label, type, name }) => {
     return (
         <div className={`form-field-container ${containerClassName ? containerClassName : ''}`}>
             <label htmlFor={`${name}`}>{label}</label>
-            <input 
-                type={`${type}`} 
-                id={`${name}`} 
-                name={`${name}`} 
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
-            />
+            {type === 'textarea' ? (
+                <textarea 
+                    id={name} 
+                    name={name} 
+                    value={value} 
+                    onChange={(e) => setValue(e.target.value)} 
+                />
+            ) : (
+                <input 
+                    type={`${type}`} 
+                    id={`${name}`} 
+                    name={`${name}`} 
+                    value={value}
+                    onChange={(e) => setValue(e.target.value)}
+                />
+            )}
         </div>
     );
 }

@@ -58,26 +58,31 @@ label {
     color: var(--dark-grey);
 }
 
-input {
+input{
     height: var(--input-field-height);
+}
+
+textarea {
+    height: calc(3 * var(--input-field-height));
+}
+
+input,
+textarea {
     width: 100%;
 
     border: 1px solid var(--light-grey);
     border-radius: 5px;
-    padding: 0 8px;
+    padding: 8px 8px;
 
     /* Remove default styling */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
-input:focus-visible {
+input:focus-visible,
+textarea:focus-visible {
     border-color: var(--primary);
     outline: 1px solid var(--primary);
-}
-
-input[type=textarea] {
-    height: calc(2 * var(--input-field-height));
 }
 
 .add-form-btn > .btn-icon-wrapper {

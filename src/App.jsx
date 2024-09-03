@@ -1,6 +1,7 @@
 import ProgressTracker from './components/ProgressTracker'
 import ContactForm from './components/forms/ContactForm'
 import EducationForm from './components/forms/EducationForm'
+import ExperienceForm from './components/forms/ExperienceForm'
 import personIcon from './assets/icons/personIcon.svg'
 import schoolIcon from './assets/icons/schoolIcon.svg'
 import workIcon from './assets/icons/workIcon.svg'
@@ -27,6 +28,10 @@ function App() {
       <ProgressTracker steps={steps} currentStep={1}/>
     </div>
     <EducationForm />
+    <div className='progress-tracker-wrapper'>
+      <ProgressTracker steps={steps} currentStep={1}/>
+    </div>
+    <ExperienceForm />
     </>
   )
 }
