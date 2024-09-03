@@ -11,7 +11,7 @@ const defaultDelFormBtn = {
     'classNames': 'del-form-btn',
 }
 
-const FormField = ({ containerClassName, label, type, name, placeholder, pattern=null }) => {
+const FormField = ({ containerClassName, label, type, name }) => {
     const [value, setValue] = useState('');
 
     return (
@@ -21,9 +21,7 @@ const FormField = ({ containerClassName, label, type, name, placeholder, pattern
                 type={`${type}`} 
                 id={`${name}`} 
                 name={`${name}`} 
-                placeholder={`${placeholder}`} 
                 value={value}
-                pattern={pattern ? pattern : null}
                 onChange={(e) => setValue(e.target.value)}
             />
         </div>
@@ -46,8 +44,6 @@ const FormWrapper = ({ fields, canDelete=true }) => {
                         label={field.label}
                         type={field.type}
                         name={field.name}
-                        placeholder={field.placeholder}
-                        pattern={field.pattern}
                     />
                 ))}
             </form>

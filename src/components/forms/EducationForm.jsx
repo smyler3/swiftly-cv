@@ -3,11 +3,11 @@ import FormWrapper from '../FormWrapper';
 import NavigationButtons from '../NavigationButtons';
 
 const educationFormFields = [
-    {'name': 'schoolName', 'label': 'School Name:', 'type': 'text', 'placeholder': 'Harvard University'},
-    {'name': 'studyTitle', 'label': 'Name of Course/Certificate:', 'type': 'text', 'placeholder': 'Bachelor of Science'},
+    {'name': 'schoolName', 'label': 'School Name:', 'type': 'text'},
+    {'name': 'studyTitle', 'label': 'Name of Course/Certificate:', 'type': 'text'},
     {'name': 'studyScore', 'label': 'Score Recieved:', 'type': 'text', 'placeholder': '3.72'},
-    {'containerClassName': 'date-field-container', 'name': 'studyStartDate', 'label': 'Start Date:', 'type': 'date', 'placeholder': 'dd/mm/yyyy'},
-    {'containerClassName': 'date-field-container', 'name': 'studyEndDate', 'label': 'End Date:', 'type': 'date', 'placeholder': 'dd/mm/yyyy'},
+    {'containerClassName': 'date-field-container', 'name': 'studyStartDate', 'label': 'Start Date:', 'type': 'date'},
+    {'containerClassName': 'date-field-container', 'name': 'studyEndDate', 'label': 'End Date:', 'type': 'date'},
 ]
 
 const EducationForm = () => {
