@@ -11,15 +11,8 @@
     text-align: center;
 }
 
-.progress-tracker-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-}
-
-.form-page {
+main,
+.content-page {
     width: 100%;
 }
 

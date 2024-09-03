@@ -9,13 +9,13 @@ const contactFormFields = [
 
 const ContactForm = () => {
     return (
-        <>
-        <div className='form-page'>
-            <h2 className="form-title">CONTACT DETAILS</h2>
-            <FormWrapper fields={contactFormFields} canDelete={false} />
-        </div>
-        <NavigationButtons back={null}/>
-        </>
+        <main>
+            <div className='content-page'>
+                <h2 className="form-title">CONTACT DETAILS</h2>
+                <FormWrapper fields={contactFormFields} canDelete={false} />
+            </div>
+            <NavigationButtons back={null}/>
+        </main>
     )
 }
 

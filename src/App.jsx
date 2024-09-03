@@ -2,6 +2,7 @@ import ProgressTracker from './components/ProgressTracker'
 import ContactForm from './components/forms/ContactForm'
 import EducationForm from './components/forms/EducationForm'
 import ExperienceForm from './components/forms/ExperienceForm'
+import PreviewPage from './components/PreviewPage'
 import personIcon from './assets/icons/personIcon.svg'
 import schoolIcon from './assets/icons/schoolIcon.svg'
 import workIcon from './assets/icons/workIcon.svg'
@@ -20,18 +21,14 @@ function App() {
 
   return (
     <>
-    <div className='progress-tracker-wrapper'>
-      <ProgressTracker steps={steps} currentStep={0} />
-    </div>
+    <ProgressTracker steps={steps} currentStep={0} />
     <ContactForm />
-    <div className='progress-tracker-wrapper'>
-      <ProgressTracker steps={steps} currentStep={1}/>
-    </div>
+    <ProgressTracker steps={steps} currentStep={1}/>
     <EducationForm />
-    <div className='progress-tracker-wrapper'>
-      <ProgressTracker steps={steps} currentStep={1}/>
-    </div>
+    <ProgressTracker steps={steps} currentStep={2}/>
     <ExperienceForm />
+    <ProgressTracker steps={steps} currentStep={3}/>
+    <PreviewPage />
     </>
   )
 }

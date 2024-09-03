@@ -12,14 +12,14 @@ const educationFormFields = [
 
 const EducationForm = () => {
     return (
-        <>
-        <div className='form-page'>
-        <h2 className="form-title">EDUCATION DETAILS</h2>
-            <FormWrapper fields={educationFormFields} />
-        </div>
-        <AddFormButton text="Education" />
-        <NavigationButtons />
-        </>
+        <main>
+            <div className='content-page'>
+                <h2 className="form-title">EDUCATION DETAILS</h2>
+                <FormWrapper fields={educationFormFields} />
+            </div>
+            <AddFormButton text="Education" />
+            <NavigationButtons />
+        </main>
     )
 }
 

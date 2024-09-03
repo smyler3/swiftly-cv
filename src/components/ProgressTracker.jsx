@@ -29,7 +29,7 @@ const ProgressTracker = ({ steps, currentStep=0 }) => {
     };
 
     return (
-        <div className="progress-tracker">
+        <section className="progress-tracker">
             <div className="step-indicators">
                 {steps.map((step, index) => (
                     <StepMarker
@@ -42,7 +42,7 @@ const ProgressTracker = ({ steps, currentStep=0 }) => {
                 ))}
             </div>
             <ProgressBar currentStep={currentStep} totalSteps={steps.length}/>
-        </div>
+        </section>
     )
 };
 

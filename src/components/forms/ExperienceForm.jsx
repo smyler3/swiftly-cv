@@ -12,14 +12,14 @@ const experienceFormFields = [
 
 const ExperienceForm = () => {
     return (
-        <>
-        <div className='form-page'>
-        <h2 className="form-title">EXPERIENCE DETAILS</h2>
-            <FormWrapper fields={experienceFormFields} />
-        </div>
-        <AddFormButton text="Experience" />
-        <NavigationButtons />
-        </>
+        <main>
+            <div className='content-page'>
+                <h2 className="form-title">EXPERIENCE DETAILS</h2>
+                <FormWrapper fields={experienceFormFields} />
+            </div>
+            <AddFormButton text="Experience" />
+            <NavigationButtons />
+        </main>
     )
 }
 
