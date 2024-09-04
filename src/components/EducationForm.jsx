@@ -1,6 +1,4 @@
-import AddFormButton from '../AddFormButton';
-import FormWrapper from '../FormWrapper';
-import NavigationButtons from '../NavigationButtons';
+import FormSection from "./FormSection";
 
 const educationFormFields = [
     {'name': 'schoolName', 'label': 'School Name:', 'type': 'text'},
@@ -12,14 +10,11 @@ const educationFormFields = [
 
 const EducationForm = () => {
     return (
-        <main>
-            <div className='content-page'>
-                <h2 className="form-title">EDUCATION DETAILS</h2>
-                <FormWrapper fields={educationFormFields} />
-            </div>
-            <AddFormButton text="Education" />
-            <NavigationButtons />
-        </main>
+        <FormSection 
+            title='EDUCATION DETAILS'
+            fields={educationFormFields}
+            addFormText='Education'
+        />
     )
 }
 

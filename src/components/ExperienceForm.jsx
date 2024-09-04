@@ -1,6 +1,4 @@
-import AddFormButton from '../AddFormButton';
-import FormWrapper from '../FormWrapper';
-import NavigationButtons from '../NavigationButtons';
+import FormSection from "./FormSection";
 
 const experienceFormFields = [
     {'name': 'companyName', 'label': 'Company Name:', 'type': 'text'},
@@ -12,14 +10,11 @@ const experienceFormFields = [
 
 const ExperienceForm = () => {
     return (
-        <main>
-            <div className='content-page'>
-                <h2 className="form-title">EXPERIENCE DETAILS</h2>
-                <FormWrapper fields={experienceFormFields} />
-            </div>
-            <AddFormButton text="Experience" />
-            <NavigationButtons />
-        </main>
+        <FormSection 
+            title='EXPERIENCE DETAILS'
+            fields={experienceFormFields}
+            addFormText='Experience'
+        />
     )
 }
 

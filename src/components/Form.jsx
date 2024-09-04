@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../styles/FormWrapper.css';
+import '../styles/Form.css';
 import Button from "./Button";
 import closeIcon from "../assets/icons/closeIcon.svg"
 
@@ -37,7 +37,7 @@ const FormField = ({ containerClassName, label, type, name }) => {
     );
 }
 
-const FormWrapper = ({ fields, canDelete=true }) => {
+const Form = ({ fields, canDelete=true }) => {
     return (
         <div className={`form-wrapper ${canDelete ? 'deleteable-form-wrapper' : ''}`}>
             {canDelete && (
@@ -60,4 +60,4 @@ const FormWrapper = ({ fields, canDelete=true }) => {
     )
 }
 
-export default FormWrapper;
+export default Form;
