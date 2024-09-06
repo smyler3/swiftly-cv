@@ -20,14 +20,16 @@ const steps = [
 function App() {
   return (
     <>
-    <ProgressTracker steps={steps} currentStep={0} />
-    <PersonalForm />
-    <ProgressTracker steps={steps} currentStep={1}/>
-    <EducationForm />
-    <ProgressTracker steps={steps} currentStep={2}/>
-    <ExperienceForm />
-    <ProgressTracker steps={steps} currentStep={3}/>
-    <PreviewPage />
+    <main>
+      <ProgressTracker steps={steps} currentStep={0} />
+      <PersonalForm />
+      <ProgressTracker steps={steps} currentStep={1}/>
+      <EducationForm />
+      <ProgressTracker steps={steps} currentStep={2}/>
+      <ExperienceForm />
+      <ProgressTracker steps={steps} currentStep={3}/>
+      <PreviewPage />
+    </main>
     <Footer />
     </>
   )

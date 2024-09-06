@@ -1,8 +1,10 @@
 footer {
     width: 100%;
 
+    padding: 10px;
+
     background-color: white;
-    box-shadow: 0 0 2px #00000025;
+    box-shadow: 0 -2px 2px #00000025;
 }
 
 .footer-content-wrapper {
@@ -12,7 +14,6 @@ footer {
     gap: 5px;
 
     width: 100%;
-    max-width: var(--max-content-width);
 }
 
 .footer-text {

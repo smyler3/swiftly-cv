@@ -5,15 +5,20 @@
     justify-content: center;
 
     width: 100vw;
-    max-width: var(--max-content-width);
     margin: 0 auto;
-    padding: 15px;
     text-align: center;
+
+    background-color: #FCFCFC;
 }
 
 main,
 .content-page {
     width: 100%;
+    max-width: var(--max-content-width);
+
+    padding: 15px;
+
+    background-color: #FCFCFC;
 }
 
 button {
