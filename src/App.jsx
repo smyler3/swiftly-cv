@@ -3,6 +3,7 @@ import PersonalForm from './components/PersonalForm'
 import EducationForm from './components/EducationForm'
 import ExperienceForm from './components/ExperienceForm'
 import PreviewPage from './components/PreviewPage'
+import Footer from './components/Footer'
 import personIcon from './assets/icons/personIcon.svg'
 import schoolIcon from './assets/icons/schoolIcon.svg'
 import workIcon from './assets/icons/workIcon.svg'
@@ -27,6 +28,7 @@ function App() {
     <ExperienceForm />
     <ProgressTracker steps={steps} currentStep={3}/>
     <PreviewPage />
+    <Footer />
     </>
   )
 }

@@ -1,0 +1,35 @@
+footer {
+    width: 100%;
+
+    background-color: white;
+    box-shadow: 0 0 2px #00000025;
+}
+
+.footer-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    width: 100%;
+    max-width: var(--max-content-width);
+}
+
+.footer-text {
+    color: black;
+    font-size: 14px;
+}
+
+.footer-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 14px;
+    width: auto;
+}
+
+.footer-image {
+    height: 14px;
+    width: 14px;
+}

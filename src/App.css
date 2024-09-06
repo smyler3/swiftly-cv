@@ -5,7 +5,7 @@
     justify-content: center;
 
     width: 100vw;
-    max-width: 500px;
+    max-width: var(--max-content-width);
     margin: 0 auto;
     padding: 15px;
     text-align: center;
