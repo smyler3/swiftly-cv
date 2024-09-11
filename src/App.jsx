@@ -11,6 +11,7 @@ import schoolIcon from './assets/icons/schoolIcon.svg'
 import workIcon from './assets/icons/workIcon.svg'
 import previewIcon from './assets/icons/previewIcon.svg'
 import './App.css'
+import { useState } from 'react'
 
 const steps = [
 	{'label': 'Personal', 'icon': personIcon},
@@ -20,19 +21,21 @@ const steps = [
 ]
 
 function App() {
+  const [lightMode, setLightMode] = useState(true);
+
   return (
     <>
-    <Header />
+    <Header lightMode={lightMode} />
     <main>
       <LandingPage />
-      {/* <ProgressTracker steps={steps} currentStep={0} />
+      <ProgressTracker steps={steps} currentStep={0} />
       <PersonalForm />
       <ProgressTracker steps={steps} currentStep={1}/>
       <EducationForm />
       <ProgressTracker steps={steps} currentStep={2}/>
       <ExperienceForm />
       <ProgressTracker steps={steps} currentStep={3}/>
-      <PreviewPage /> */}
+      <PreviewPage />
     </main>
     <Footer />
     </>

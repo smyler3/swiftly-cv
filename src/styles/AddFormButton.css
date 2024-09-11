@@ -4,3 +4,20 @@
     font-size: 23px;
     color: var(--primary);
 }
+
+.add-form-btn > .btn-icon-wrapper {
+    height: 25px;
+    width: 25px;
+}
+.add-form-btn:hover {
+    color: #00B8E6;
+}
+.add-form-btn:hover > .btn-icon-wrapper > svg {
+    fill: #00B8E6;
+}
+.add-form-btn:active {
+    color: #00A7CC;
+}
+.add-form-btn:active > .btn-icon-wrapper > svg {
+    fill: #00A7CC;
+}

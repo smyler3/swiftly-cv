@@ -35,8 +35,29 @@ header {
     font-weight: bold;
 }
 
-.theme-btn,
-.theme-btn > img {
+.theme-btn > .btn-icon-wrapper {
     height: 24px;
     width: 24px;
 }
+
+/* Light Mode */
+.theme-btn > .btn-icon-wrapper > svg {
+    fill: var(--dark-grey);
+}
+.theme-btn:hover > .btn-icon-wrapper > svg {
+    fill: lightskyblue;
+}
+.theme-btn:active > .btn-icon-wrapper > svg {
+    fill: black;
+}
+
+/* Dark Mode */
+/* .theme-btn > .btn-icon-wrapper > svg {
+    fill: var(--light-grey);
+}
+.theme-btn:hover > .btn-icon-wrapper > svg {
+    fill: goldenrod;
+}
+.theme-btn:active > .btn-icon-wrapper > svg {
+    fill: white;
+} */

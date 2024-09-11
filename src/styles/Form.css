@@ -33,6 +33,12 @@
     border: none;
     background: none;
 }
+.del-form-btn:hover > .btn-icon-wrapper > svg {
+    fill: #ff0800;
+}
+.del-form-btn:active > .btn-icon-wrapper > svg {
+    fill: #9e0000;
+}
 
 .form {
     display: grid;
@@ -83,9 +89,4 @@ input:focus-visible,
 textarea:focus-visible {
     border-color: var(--primary);
     outline: 1px solid var(--primary);
-}
-
-.add-form-btn > .btn-icon-wrapper {
-    height: 25px;
-    width: 25px;
 }

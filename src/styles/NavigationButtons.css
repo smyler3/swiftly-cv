@@ -8,11 +8,23 @@
     width: 100%;
 }
 
+.back-btn > .btn-icon-wrapper {
+    height: 30px;
+    width: 30px;
+}
+
 .back-btn {
     color: var(--light-grey);
 }
-
-.back-btn > .btn-icon-wrapper {
-    max-height: 30px;
-    max-width: 30px;
+.back-btn:hover {
+    color: #A6A6A6;
+}
+.back-btn:hover > .btn-icon-wrapper > svg {
+    fill: #A6A6A6;
+}
+.back-btn:active {
+    color: black;
+}
+.back-btn:active > .btn-icon-wrapper > svg {
+    fill: black;
 }

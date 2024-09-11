@@ -1,11 +1,13 @@
 import "../styles/Header.css"
-import lightModeIcon from "../assets/icons/lightModeIcon.svg"
+import LightModeIcon from "./LightModeIcon";
+import DarkModeIcon from "./DarkModeIcon";
+import Button from "./Button";
 
 const onToggleTheme = () => {
 
 };
 
-const Header = () => {
+const Header = ({ lightMode=true }) => {
     return (
         <header>
             <div className="header-content">
@@ -13,9 +15,7 @@ const Header = () => {
                     <img src="" alt="" />
                 </span>
                 <h1 className="header-title">SWIFTLY CV</h1>
-                <button onClick={onToggleTheme} className="theme-btn">
-                    <img src={lightModeIcon} alt="" />
-                </button>
+                <Button icon={lightMode ? <LightModeIcon /> : <DarkModeIcon />} onClick={null} classNames="theme-btn" />
             </div>
         </header>
     )
