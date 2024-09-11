@@ -14,17 +14,20 @@
 }
 
 .back-btn {
-    color: var(--light-grey);
+    color: var(--back-btn-colour);
+}
+.back-btn > .btn-icon-wrapper > svg {
+    fill: var(--back-btn-colour);
 }
 .back-btn:hover {
-    color: #A6A6A6;
+    color: var(--back-btn-hover-colour);
 }
 .back-btn:hover > .btn-icon-wrapper > svg {
-    fill: #A6A6A6;
+    fill: var(--back-btn-hover-colour);
 }
 .back-btn:active {
-    color: black;
+    color: var(--back-btn-active-colour);
 }
 .back-btn:active > .btn-icon-wrapper > svg {
-    fill: black;
+    fill: var(--back-btn-active-colour);
 }

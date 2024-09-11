@@ -7,8 +7,8 @@ header {
 
     padding: 12px;
 
-    background-color: white;
-    box-shadow: 0 2px 2px #00000025;
+    background-color: var(--main-card-background);
+    box-shadow: 0 2px 2px var(--shadow-colour);
     z-index: 1;
 }
 
@@ -21,6 +21,7 @@ header {
     max-width: var(--max-content-width);
 }
 
+/* TODO: Remove background colour */
 .logo-container {
     height: 40px;
     width: 40px;
@@ -30,34 +31,21 @@ header {
 }
 
 .header-title {
-    color: black;
     font-size: 30px;
     font-weight: bold;
 }
 
 .theme-btn > .btn-icon-wrapper {
-    height: 24px;
-    width: 24px;
+    height: 30px;
+    width: 30px;
 }
 
-/* Light Mode */
 .theme-btn > .btn-icon-wrapper > svg {
-    fill: var(--dark-grey);
+    fill: var(--toggle-theme-btn-colour);
 }
 .theme-btn:hover > .btn-icon-wrapper > svg {
-    fill: lightskyblue;
+    fill: var(--toggle-theme-hover-btn-colour);
 }
 .theme-btn:active > .btn-icon-wrapper > svg {
-    fill: black;
+    fill: var(--toggle-theme-active-btn-colour);
 }
-
-/* Dark Mode */
-/* .theme-btn > .btn-icon-wrapper > svg {
-    fill: var(--light-grey);
-}
-.theme-btn:hover > .btn-icon-wrapper > svg {
-    fill: goldenrod;
-}
-.theme-btn:active > .btn-icon-wrapper > svg {
-    fill: white;
-} */

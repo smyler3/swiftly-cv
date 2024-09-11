@@ -11,7 +11,7 @@ import schoolIcon from './assets/icons/schoolIcon.svg'
 import workIcon from './assets/icons/workIcon.svg'
 import previewIcon from './assets/icons/previewIcon.svg'
 import './App.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const steps = [
 	{'label': 'Personal', 'icon': personIcon},
@@ -21,11 +21,22 @@ const steps = [
 ]
 
 function App() {
-  const [lightMode, setLightMode] = useState(true);
+  const [theme, setTheme] = useState("light");
+
+  // Toggles between light and dark themes
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  }
+
+  // Apply theme class when theme changes
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   return (
     <>
-    <Header lightMode={lightMode} />
+    <Header lightMode={theme === "light"} />
     <main>
       <LandingPage />
       <ProgressTracker steps={steps} currentStep={0} />

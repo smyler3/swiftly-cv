@@ -1,9 +1,9 @@
 .form-title {
     margin: 60px 0 35px;
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid var(--form-title-underline-colour);
 
     font-size: 30px;
     font-weight: 500;
     text-align: start;
-    color: var(--primary);
+    color: var(--form-title-colour);
 }

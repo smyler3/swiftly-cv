@@ -13,7 +13,7 @@
     margin-bottom: 30px;
     
     padding-bottom: 20px;
-    border-bottom: 2px dashed var(--dark-grey);
+    border-bottom: 2px dashed var(--form-deletable-underline);
 }
 
 .del-form-btn-wrapper {
@@ -30,14 +30,15 @@
     height: 100%;
     width: auto;
 
+    fill: var(--delete-form-btn-colour);
     border: none;
     background: none;
 }
 .del-form-btn:hover > .btn-icon-wrapper > svg {
-    fill: #ff0800;
+    fill: var(--delete-form-btn-hover-colour);
 }
 .del-form-btn:active > .btn-icon-wrapper > svg {
-    fill: #9e0000;
+    fill: var(--delete-form-btn-active-colour);
 }
 
 .form {
@@ -61,7 +62,7 @@
 label {
     font-size: 16px;
     font-weight: 600;
-    color: var(--dark-grey);
+    color: var(--form-label-colour);
 }
 
 input{
@@ -76,9 +77,12 @@ input,
 textarea {
     width: 100%;
 
-    border: 1px solid var(--light-grey);
-    border-radius: 5px;
     padding: 8px 8px;
+
+    color: var(--form-input-colour);
+    border: 1px solid var(--form-input-border);
+    border-radius: 5px;
+    background-color: var(--form-input-background);
 
     /* Remove default styling */
     -webkit-appearance: none;
@@ -87,6 +91,6 @@ textarea {
 }
 input:focus-visible,
 textarea:focus-visible {
-    border-color: var(--primary);
-    outline: 1px solid var(--primary);
+    border-color: var(--form-input-focus-border);
+    outline: 1px solid var(--form-input-focus-outline);
 }

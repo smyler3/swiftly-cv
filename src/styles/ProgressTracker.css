@@ -49,7 +49,6 @@
     aspect-ratio: 1 / 1;
 
     border-radius: 50%;
-    background-color: #d9d9d9;
 }
 
 .step-icon > img {
@@ -70,8 +69,6 @@
     width: 100%;
 
     content: '';
-
-    background-color: var(--light-grey);
 }
 .step-icon::before {
     left: -100%;
@@ -84,18 +81,7 @@
     color: white;
     font-weight: bold;
     font-size: 9pt;
-    background-color: var(--light-grey);
     overflow: hidden;
-}
-
-/* Colour the step headers and connecting lines based on current step */
-.step-active > div,
-.step-complete > div,
-.step-active > .step-icon::before,
-.step-complete > .step-icon::before,
-.step-complete > .step-icon::after,
-.step-marker.step-active:last-of-type > .step-icon::after {
-    background-color: var(--primary);
 }
 
 .progress-bar {
@@ -106,13 +92,31 @@
     width: 100%;
 
     border-radius: 10px / 25%;
-    background-color: var(--light-grey);
     overflow: hidden; /* Keeps edges appearing rounded as progress increases */
 }
 
 .progress {
     height: 100%;
-    background: linear-gradient(to right, var(--primary), var(--secondary));
+    background: var(--progress-bar-complete-gradient);
+}
+
+/* Colour the step headers and connecting lines based on current step being inactive */
+.step-icon,
+.step-icon::before,
+.step-icon::after,
+.step-label,
+.progress-bar {
+    background-color: var(--tracker-incomplete-background-colour);
+}
+
+/* Colour the step headers and connecting lines based on current step being active or complete */
+.step-active > div,
+.step-complete > div,
+.step-active > .step-icon::before,
+.step-complete > .step-icon::before,
+.step-complete > .step-icon::after,
+.step-marker.step-active:last-of-type > .step-icon::after {
+    background-color: var(--tracker-complete-background-colour);
 }
 
 /* Mobile Devices */
