@@ -29,8 +29,6 @@ main,
     max-width: var(--max-content-width);
 }
 
-
-
 button {
     display: flex;
     align-items: center;

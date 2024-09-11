@@ -25,7 +25,7 @@ const FeatureCard = ({ title, description }) => {
 
 const LandingPage = () => {
     return (
-        <div className="content-page">
+        <div className="content-page landing-page">
             <h2 className="page-title">Create your own custom resume in seconds</h2>
             <Button icon={null} text="GET STARTED" onClick={null} classNames="btn-default" />
             <div className="feature-cards-container">
