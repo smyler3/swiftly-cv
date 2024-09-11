@@ -1,0 +1,59 @@
+.content-page {
+    color: black;
+}
+
+.page-title {
+    margin-bottom: 25px;
+
+    text-align: start;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.feature-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    margin: 55px 0 45px;
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 8px 10px;
+
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0px 2px 4px #00000025;
+}
+
+.feature-card-icon-container,
+.feature-card-icon-container > img {
+    height: 25px;
+    width: 25px;
+}
+
+.feature-title,
+.feature-description {
+    text-align: start;
+}
+
+.feature-title {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.feature-description {
+    font-size: 12px;
+}
+
+.btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}

@@ -1,3 +1,4 @@
+import LandingPage from './components/LandingPage'
 import ProgressTracker from './components/ProgressTracker'
 import PersonalForm from './components/PersonalForm'
 import EducationForm from './components/EducationForm'
@@ -23,14 +24,15 @@ function App() {
     <>
     <Header />
     <main>
-      <ProgressTracker steps={steps} currentStep={0} />
+      <LandingPage />
+      {/* <ProgressTracker steps={steps} currentStep={0} />
       <PersonalForm />
       <ProgressTracker steps={steps} currentStep={1}/>
       <EducationForm />
       <ProgressTracker steps={steps} currentStep={2}/>
       <ExperienceForm />
       <ProgressTracker steps={steps} currentStep={3}/>
-      <PreviewPage />
+      <PreviewPage /> */}
     </main>
     <Footer />
     </>
