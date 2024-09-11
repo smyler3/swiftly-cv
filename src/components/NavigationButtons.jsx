@@ -7,7 +7,7 @@ const backBtn = {
     'icon': backArrowIcon,
     'text': 'BACK',
     'onClick': null,
-    'classNames': 'nav-btn back-btn',
+    'classNames': 'back-btn',
 }
 
 // Default forward button parameters
@@ -15,7 +15,7 @@ const forwardBtn = {
     'icon': null,
     'text': 'SAVE & CONTINUE',
     'onClick': null,
-    'classNames': 'nav-btn fwd-btn',
+    'classNames': 'btn-default',
 }
 
 const NavigationButtons = ({ canGoBack=true }) => {
@@ -24,7 +24,7 @@ const NavigationButtons = ({ canGoBack=true }) => {
             <span>
                 {canGoBack && <Button icon={backBtn.icon} text={backBtn.text} onClick={backBtn.onClick} classNames={backBtn.classNames}></Button>}
             </span>
-            <span className="fwd-btn-container">
+            <span>
                 <Button icon={forwardBtn.icon} text={forwardBtn.text} onClick={forwardBtn.onClick} classNames={forwardBtn.classNames}></Button>
             </span>
         </div>
