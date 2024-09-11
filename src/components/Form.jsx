@@ -1,11 +1,11 @@
 import { useState } from "react";
 import '../styles/Form.css';
 import Button from "./Button";
-import closeIcon from "../assets/icons/closeIcon.svg"
+import CloseIcon from "./CloseIcon";
 
 // Default delete form button paramaters
 const defaultDelFormBtn = {
-    'icon': closeIcon,
+    'icon': <CloseIcon />,
     'text': null,
     'onClick': null,
     'classNames': 'del-form-btn',

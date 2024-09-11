@@ -2,6 +2,12 @@
     gap: 10px;
 }
 
-.btn-icon-wrapper > img {
+.btn-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-icon-wrapper > svg {
     width: 100%;
 }

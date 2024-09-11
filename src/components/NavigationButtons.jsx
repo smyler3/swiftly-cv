@@ -1,10 +1,10 @@
 import Button from "./Button";
-import backArrowIcon from "../assets/icons/backArrowIcon.svg";
+import BackIcon from "./BackIcon";
 import "../styles/NavigationButtons.css";
 
 // Default back button paramaters
 const backBtn = {
-    'icon': backArrowIcon,
+    'icon': <BackIcon />,
     'text': 'BACK',
     'onClick': null,
     'classNames': 'back-btn',
