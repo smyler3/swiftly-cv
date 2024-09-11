@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: white;
+    box-shadow: 0 2px 2px #00000025;
+    z-index: 1;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    max-width: var(--max-content-width);
+}
+
+.logo-container {
+    height: 40px;
+    width: 40px;
+
+    border-radius: 50%;
+    background-color: lightgrey;
+}
+
+.header-title {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.theme-btn,
+.theme-btn > img {
+    height: 24px;
+    width: 24px;
+}
