@@ -2,12 +2,10 @@ import NavigationButtons from './NavigationButtons';
 
 const PreviewPage = () => {
     return (
-        <main>
-            <div className='content-page'>
-                <h2 className="form-title">PREVIEW</h2>
-            </div>
+        <div className='content-page'>
+            <h2 className="form-title">PREVIEW</h2>
             <NavigationButtons />
-        </main>
+        </div>
     )
 }
 

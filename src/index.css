@@ -42,6 +42,9 @@ body {
   :root {
     color: #213547;
     background-color: #ffffff;
+    --header-background-colour: white;
+    --main-background-colour: #FCFCFC;
+    --footer-background-colour: white;
   }
   a:hover {
     color: #747bff;
