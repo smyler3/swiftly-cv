@@ -1,4 +1,4 @@
-import githubIcon from "../assets/icons/githubIcon.svg"
+import GithubIcon from "./GithubIcon";
 import "../styles/Footer.css"
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
                 <span className="footer-text">Copyright © 2024 smyler3</span>
                 <span className="footer-image-container">
                     <a href="https://github.com/smyler3" target="_blank" rel="noopener noreferrer">
-                        <img src={githubIcon} alt=""  className="footer-image"/>
+                        <GithubIcon />
                     </a>
                 </span>
             </div>

@@ -20,21 +20,18 @@ footer {
     font-size: 14px;
 }
 
-.footer-image-container {
-    
-}
-
 .footer-image-container > a {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border-radius: 50%;
-    background-color: var(--footer-link-background);
 }
 
 .footer-image-container > a,
-.footer-image {
+.footer-image-container > a > svg {
     height: 20px;
     width: 20px;
+}
+
+.footer-image-container > a > svg {
+    fill: var(--footer-icon-colour);
 }

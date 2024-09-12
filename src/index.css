@@ -104,6 +104,9 @@ body.light {
   --form-input-border: var(--grey-200);
   --form-deletable-underline: var(--black);
 
+  /* Footer Colours */
+  --footer-icon-colour: var(--black);
+
   /* Button Colours */
   --toggle-theme-hover-btn-colour: var(--moon-colour);
   --toggle-theme-active-btn-colour: var(--black);
@@ -128,6 +131,9 @@ body.dark {
   --form-input-background: var(--grey-900);
   --form-input-border: var(--grey-800);
   --form-deletable-underline: var(--white);
+
+  /* Footer Colours */
+  --footer-icon-colour: var(--white);
 
   /* Button Colours */
   --toggle-theme-hover-btn-colour: var(--sun-colour);
