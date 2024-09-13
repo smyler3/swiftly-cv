@@ -21,22 +21,18 @@ const steps = [
 ]
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [isLightMode, setIsLightMode] = useState(true);
 
-  // Toggles between light and dark themes
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
+    setIsLightMode(!isLightMode);
   }
-
-  // Apply theme class when theme changes
   useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
+    document.body.className = isLightMode ? "light" : "dark";
+  }, [isLightMode]);
 
   return (
     <>
-    <Header lightMode={theme === "light"} />
+    <Header isLightMode={isLightMode} toggleTheme={toggleTheme} />
     <main>
       <LandingPage />
       <ProgressTracker steps={steps} currentStep={0} />

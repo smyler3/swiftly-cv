@@ -108,8 +108,8 @@ body.light {
   --footer-icon-colour: var(--black);
 
   /* Button Colours */
-  --toggle-theme-hover-btn-colour: var(--moon-colour);
-  --toggle-theme-active-btn-colour: var(--black);
+  --toggle-theme-hover-btn-colour: var(--black);
+  --toggle-theme-active-btn-colour: var(--moon-colour);
 
   --back-btn-colour: var(--grey-200);
   --back-btn-active-colour: var(--black);
@@ -136,8 +136,8 @@ body.dark {
   --footer-icon-colour: var(--white);
 
   /* Button Colours */
-  --toggle-theme-hover-btn-colour: var(--sun-colour);
-  --toggle-theme-active-btn-colour: var(--white);
+  --toggle-theme-hover-btn-colour: var(--white);
+  --toggle-theme-active-btn-colour: var(--sun-colour);
 
   --back-btn-colour: var(--grey-600);
   --back-btn-active-colour: var(--white);

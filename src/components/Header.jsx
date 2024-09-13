@@ -3,11 +3,7 @@ import LightModeIcon from "./LightModeIcon";
 import DarkModeIcon from "./DarkModeIcon";
 import Button from "./Button";
 
-const onToggleTheme = () => {
-
-};
-
-const Header = ({ lightMode=true }) => {
+const Header = ({ isLightMode=true, toggleTheme }) => {
     return (
         <header>
             <div className="header-content">
@@ -15,7 +11,7 @@ const Header = ({ lightMode=true }) => {
                     <img src="" alt="" />
                 </span>
                 <h1 className="header-title">SWIFTLY CV</h1>
-                <Button icon={lightMode ? <DarkModeIcon /> : <LightModeIcon />} onClick={null} classNames="theme-btn" title="Toggle light and dark mode" ariaLabel="Toggle light and dark mode" />
+                <Button icon={isLightMode ?  <DarkModeIcon /> : <LightModeIcon />} onClick={toggleTheme} classNames="theme-btn" title="Toggle light and dark mode" ariaLabel="Toggle light and dark mode" />
             </div>
         </header>
     )
