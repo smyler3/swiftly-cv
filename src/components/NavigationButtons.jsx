@@ -22,10 +22,10 @@ const NavigationButtons = ({ canGoBack=true }) => {
     return (
         <div className="nav-btn-wrapper">
             <span>
-                {canGoBack && <Button icon={backBtn.icon} text={backBtn.text} onClick={backBtn.onClick} classNames={backBtn.classNames}></Button>}
+                {canGoBack && <Button icon={backBtn.icon} text={backBtn.text} onClick={backBtn.onClick} classNames={backBtn.classNames} ></Button>}
             </span>
             <span>
-                <Button icon={forwardBtn.icon} text={forwardBtn.text} onClick={forwardBtn.onClick} classNames={forwardBtn.classNames}></Button>
+                <Button icon={forwardBtn.icon} text={forwardBtn.text} onClick={forwardBtn.onClick} classNames={forwardBtn.classNames} ></Button>
             </span>
         </div>
     )

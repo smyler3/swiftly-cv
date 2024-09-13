@@ -15,7 +15,7 @@ const Header = ({ lightMode=true }) => {
                     <img src="" alt="" />
                 </span>
                 <h1 className="header-title">SWIFTLY CV</h1>
-                <Button icon={lightMode ? <DarkModeIcon /> : <LightModeIcon />} onClick={null} classNames="theme-btn" />
+                <Button icon={lightMode ? <DarkModeIcon /> : <LightModeIcon />} onClick={null} classNames="theme-btn" title="Toggle light and dark mode" ariaLabel="Toggle light and dark mode" />
             </div>
         </header>
     )

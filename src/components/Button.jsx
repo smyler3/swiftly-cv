@@ -1,8 +1,8 @@
 import "../styles/Button.css"
 
-const Button = ({ icon=null, text=null, onClick=null, classNames=null }) => {
+const Button = ({ icon=null, text=null, onClick=null, classNames=null, title=null, ariaLabel=null }) => {
     return (
-        <button className={`${classNames ? classNames : ''} ${text && icon ? 'icon-and-text-btn' : ''}`} onClick={onClick}>
+        <button className={`${classNames ? classNames : ''} ${text && icon ? 'icon-and-text-btn' : ''}`} onClick={onClick} title={title} aria-label={ariaLabel}>
             {icon && <span className="btn-icon-wrapper">{icon}</span>}
             {text && <span className="text">{text}</span>}
         </button>

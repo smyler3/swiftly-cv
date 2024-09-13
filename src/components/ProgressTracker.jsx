@@ -1,11 +1,10 @@
-import { useState } from 'react';
 import '../styles/ProgressTracker.css'
 
-const StepMarker = ({ label, icon, isActive, isComplete }) => {
+const StepMarker = ({ label, icon, altText, isActive, isComplete }) => {
     return (
         <div className={`step-marker ${isActive ? 'step-active' : ''} ${isComplete ? 'step-complete' : ''}`}>
             <div className="step-icon">
-                {icon && <img src={`${icon}`} alt="" />}
+                {icon && <img src={`${icon}`} alt={altText} />}
             </div>
             <div className="step-label">{label}</div>
         </div>
@@ -36,6 +35,7 @@ const ProgressTracker = ({ steps, currentStep=0 }) => {
                         key={index}
                         label={step.label}
                         icon={step.icon}
+                        altText={step.altText}
                         isActive={index === currentStep}
                         isComplete={index < currentStep}
                     />

@@ -14,10 +14,10 @@ import './App.css'
 import { useEffect, useState } from 'react'
 
 const steps = [
-	{'label': 'Personal', 'icon': personIcon},
-	{'label': 'Education', 'icon': schoolIcon},
-	{'label': 'Experience', 'icon': workIcon},
-	{'label': 'Preview', 'icon': previewIcon},
+	{'label': 'Personal', 'icon': personIcon, 'altText': 'Personal icon'},
+	{'label': 'Education', 'icon': schoolIcon, 'altText': 'Education icon'},
+	{'label': 'Experience', 'icon': workIcon, 'altText': 'Experience icon'},
+	{'label': 'Preview', 'icon': previewIcon, 'altText': 'Preview icon'},
 ]
 
 function App() {
