@@ -1,5 +1,4 @@
 import Button from "./Button";
-import BackIcon from "./BackIcon";
 import "../styles/NavigationButtons.css";
 
 const NavigationButtons = ({ backBtn, forwardBtn }) => {

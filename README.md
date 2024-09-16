@@ -7,8 +7,9 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Add JS to navigate between pages
-Add JS to collect useState values from form fields 
+Add JS to add extra forms
+Add JS to delete forms
+Add JS to collect useState values from form fields on navigation
 Create resume creation component
 
 Date picker icons dark mode/text??

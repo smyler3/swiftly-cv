@@ -17,7 +17,6 @@ const PersonalForm = (props) => {
             title='PERSONAL DETAILS'
             fields={personalFormFields}
             canAddDelForm={false}
-            canGoBack={false}
         />
     )
 }
