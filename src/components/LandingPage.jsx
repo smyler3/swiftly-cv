@@ -23,17 +23,17 @@ const FeatureCard = ({ title, description }) => {
     )
 }
 
-const LandingPage = () => {
+const LandingPage = ({ toggleShowLandingPage }) => {
     return (
         <div className="content-page landing-page">
             <h2 className="page-title">Create your own custom resume in seconds</h2>
-            <Button icon={null} text="GET STARTED" onClick={null} classNames="btn-default" />
+            <Button text="GET STARTED" onClick={toggleShowLandingPage} classNames="btn-default" />
             <div className="feature-cards-container">
                 {features.map((info, index) => {
                     return <FeatureCard key={index} title={info.title} description={info.description} />
                 })}
             </div>
-            <div className="btn-wrapper"><Button icon={null} text="CREATE NOW" onClick={null} classNames="btn-default" /></div>
+            <div className="btn-wrapper"><Button text="CREATE NOW" onClick={toggleShowLandingPage} classNames="btn-default" /></div>
         </div>
     );
 };

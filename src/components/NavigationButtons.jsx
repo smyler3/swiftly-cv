@@ -18,7 +18,7 @@ const forwardBtn = {
     'classNames': 'btn-default',
 }
 
-const NavigationButtons = ({ canGoBack=true }) => {
+const NavigationButtons = ({ onClickBack, onClickForward, canGoBack=true }) => {
     return (
         <div className="nav-btn-wrapper">
             <span>

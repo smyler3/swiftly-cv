@@ -10,9 +10,10 @@ const personalFormFields = [
     {'name': 'professionalSummary', 'label': 'Professional Summary:', 'type': 'textarea'},
 ]
 
-const PersonalForm = () => {
+const PersonalForm = (props) => {
     return (
         <FormSection 
+            {...props}
             title='PERSONAL DETAILS'
             fields={personalFormFields}
             canAddDelForm={false}

@@ -20,29 +20,46 @@ const steps = [
 	{'label': 'Preview', 'icon': previewIcon, 'altText': 'Preview icon'},
 ]
 
+const stepComponents = [
+  <PersonalForm onClickBack={toggleShowLandingPage} onClickForward={increaseCurrentStep} />,
+  <EducationForm onClickBack={decreaseCurrentStep} onClickForward={increaseCurrentStep} />,
+  <ExperienceForm onClickBack={decreaseCurrentStep} onClickForward={increaseCurrentStep} />,
+  <PreviewPage onClickBack={decreaseCurrentStep} onClickForward={toggleShowLandingPage} />,
+]
+
 function App() {
   const [isLightMode, setIsLightMode] = useState(true);
-
   const toggleTheme = () => {
-    setIsLightMode(!isLightMode);
+    setIsLightMode(prev => !prev);
   }
   useEffect(() => {
     document.body.className = isLightMode ? "light" : "dark";
   }, [isLightMode]);
 
+  const [currentStep, setCurrentStep] = useState(0);
+  const increaseCurrentStep = () => {
+    setCurrentStep(prev => Math.min(prev + 1, steps.length - 1));
+  }
+  const decreaseCurrentStep = () => {
+    setCurrentStep(prev => Math.max(prev - 1, 0));
+  }
+
+  const [showLandingPage, setShowLandingPage] = useState(true);
+  const toggleShowLandingPage = () => {
+    setShowLandingPage(prev => !prev);
+  }
+
   return (
     <>
     <Header isLightMode={isLightMode} toggleTheme={toggleTheme} />
     <main>
-      <LandingPage />
-      <ProgressTracker steps={steps} currentStep={0} />
-      <PersonalForm />
-      <ProgressTracker steps={steps} currentStep={1}/>
-      <EducationForm />
-      <ProgressTracker steps={steps} currentStep={2}/>
-      <ExperienceForm />
-      <ProgressTracker steps={steps} currentStep={3}/>
-      <PreviewPage />
+      {showLandingPage ?
+        <LandingPage toggleShowLandingPage={toggleShowLandingPage} /> :
+        <>
+          <ProgressTracker steps={steps} currentStep={currentStep} />
+          {stepComponents[currentStep]}
+        </>
+      }
     </main>
     <Footer />
     </>

@@ -3,13 +3,13 @@ import AddFormButton from "./AddFormButton"
 import NavigationButtons from "./NavigationButtons"
 import "../styles/FormSection.css"
 
-const FormSection = ({ title, fields, canAddDelForm=true, addFormText='', canGoBack=true}) => {
+const FormSection = ({ onClickBack, onClickForward, title, fields, canAddDelForm=true, addFormText='', canGoBack=true}) => {
     return (
         <div className='content-page'>
             <h2 className="form-title">{title}</h2>
             <Form fields={fields} canDelete={canAddDelForm} />
             {canAddDelForm && <AddFormButton text={addFormText} />}
-            <NavigationButtons canGoBack={canGoBack} />
+            <NavigationButtons onClickBack={onClickBack} onClickForward={onClickForward} canGoBack={canGoBack} />
         </div>
     )
 }
