@@ -3,7 +3,7 @@ import AddFormButton from "./AddFormButton"
 import NavigationButtons from "./NavigationButtons"
 import "../styles/FormSection.css"
 
-const FormSection = ({ title, fields, canAddDelForm=true, addFormText=''}) => {
+const FormSection = ({ title, fields, canAddDelForm=true, addFormText}) => {
     return (
         <>
             <h2 className="form-title">{title}</h2>
