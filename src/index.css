@@ -78,9 +78,9 @@ body {
   --delete-form-btn-hover-colour: var(--red-100);
   --delete-form-btn-active-colour: var(--red-200);
 
-  --add-form-btn-colour: var(--primary-100);
-  --add-form-btn-hover-colour: var(--primary-200);
-  --add-form-btn-active-colour: var(--primary-300);
+  --add-form-section-btn-colour: var(--primary-100);
+  --add-form-section-btn-hover-colour: var(--primary-200);
+  --add-form-section-btn-active-colour: var(--primary-300);
 
   --toggle-theme-btn-colour: var(--grey-300);
 

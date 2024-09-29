@@ -27,13 +27,23 @@ const LandingPage = ({ toggleShowLandingPage }) => {
     return (
         <div className="content-page landing-page">
             <h2 className="page-title">Create your own custom resume in seconds</h2>
-            <Button text="GET STARTED" onClick={toggleShowLandingPage} classNames="btn-default" />
+            <Button onClick={toggleShowLandingPage} classNames={"btn-default"} >
+                <p>
+                    GET STARTED
+                </p>
+            </Button>
             <div className="feature-cards-container">
                 {features.map((info, index) => {
                     return <FeatureCard key={index} title={info.title} description={info.description} />
                 })}
             </div>
-            <div className="btn-wrapper"><Button text="CREATE NOW" onClick={toggleShowLandingPage} classNames="btn-default" /></div>
+            <div className="btn-wrapper">
+                <Button onClick={toggleShowLandingPage} classNames={"btn-default"} >
+                    <p>
+                        CREATE NOW
+                    </p>
+                </Button>
+            </div>
         </div>
     );
 };

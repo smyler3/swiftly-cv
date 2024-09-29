@@ -1,14 +1,16 @@
-.icon-and-text-btn {
-    gap: 10px;
-}
-
-.btn-icon-wrapper {
+button,
+button > .icon-wrapper,
+button > .icon-wrapper > svg {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.btn-icon-wrapper > svg {
+button > .icon-wrapper > svg {
     height: 100%;
     width: 100%;
+}
+
+.icon-and-text-btn {
+    gap: 10px;
 }

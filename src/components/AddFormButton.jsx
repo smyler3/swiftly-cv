@@ -2,18 +2,15 @@ import AddCircleIcon from "./AddCircleIcon";
 import Button from "./Button";
 import "../styles/AddFormButton.css";
 
-// TODO: Add styling back and rename btn-default and move btn icon styling to Button.css?
 const AddFormButton = ({ onClick }) => {
     return (
-        <Button onClick={onClick} classNames="add-form-section-btn" >
-            <div>
-                <span>
-                    <AddCircleIcon />
-                </span>
-                <span>
-                    Create New Section
-                </span>
-            </div>
+        <Button onClick={onClick} classNames="add-form-section-btn icon-and-text-btn" >
+            <span className="icon-wrapper">
+                <AddCircleIcon />
+            </span>
+            <span>
+                Create New Section
+            </span>
         </Button>
     )
 };

@@ -2,13 +2,12 @@ import Button from "./Button";
 import BackIcon from "./BackIcon";
 import "../styles/NavigationButtons.css";
 
-// TODO: Add styling back and rename btn-default and move btn icon styling to Button.css?
 const NavigationButtons = ({ currentStep, steps, handleBackClick, handleContinueClick }) => {
     return (
-        <div className="nav-button-wrapper">
+        <div className="nav-buttons-wrapper">
             <span>
-                <Button onClick={handleBackClick} classNames='back-btn'>
-                    <span>
+                <Button onClick={handleBackClick} classNames='back-btn icon-and-text-btn'>
+                    <span className="icon-wrapper">
                         <BackIcon />
                     </span>
                     <span>

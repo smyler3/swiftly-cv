@@ -2,7 +2,11 @@ import { useCallback, useEffect, useState } from "react";
 import Form from "./Form";
 import ProgressTracker from "./ProgressTracker";
 import NavigationButtons from "./NavigationButtons";
-import "../styles/FormComponent.css";
+import personIcon from "../assets/icons/personIcon.svg";
+import schoolIcon from "../assets/icons/schoolIcon.svg";
+import workIcon from "../assets/icons/workIcon.svg";
+import previewIcon from "../assets/icons/previewIcon.svg";
+import "../styles/FormContent.css";
 
 const personalFields = [
     {name: 'fullName', label: 'Full Name:', type: 'text'},

@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import './App.css'
 import { useEffect, useState } from 'react'
-import FormContent from './components/FormRefactor'
+import FormContent from './components/FormContent';
 
 function App() {
     const [isLightMode, setIsLightMode] = useState(true);
