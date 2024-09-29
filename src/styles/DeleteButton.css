@@ -1,8 +1,10 @@
-.del-form-section-btn {
+.delete-form-section-btn-wrapper {
     grid-column: span 2;
     display: flex;
     justify-content: flex-end;
+}
 
+.del-form-section-btn {
     border: none;
     background: none;
 }

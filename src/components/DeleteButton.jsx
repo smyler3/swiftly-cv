@@ -4,11 +4,13 @@ import "../styles/DeleteButton.css";
 
 const DeleteButton = ({ onClick }) => {
     return (
-        <Button onClick={onClick} classNames="del-form-section-btn">
-            <div className="icon-wrapper">
-                <CloseIcon />
-            </div>
-        </Button> 
+        <div className="delete-form-section-btn-wrapper">
+            <Button onClick={onClick} classNames="del-form-section-btn">
+                <div className="icon-wrapper">
+                    <CloseIcon />
+                </div>
+            </Button>
+        </div> 
     )
 };
 
