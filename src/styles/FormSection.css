@@ -1,6 +1,6 @@
 .form-section {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    column-gap: 20px;
 }
 
 .deleteable-form-section {

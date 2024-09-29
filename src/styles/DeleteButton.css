@@ -1,5 +1,7 @@
 .del-form-section-btn {
-    align-self: self-end;
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
 
     border: none;
     background: none;

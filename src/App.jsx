@@ -1,8 +1,8 @@
-import LandingPage from './components/LandingPage'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import './App.css'
-import { useEffect, useState } from 'react'
+import LandingPage from './components/LandingPage';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import './App.css';
+import { useEffect, useState } from 'react';
 import FormContent from './components/FormContent';
 
 function App() {
@@ -22,16 +22,16 @@ function App() {
 
     return (
         <>
-        <Header isLightMode={isLightMode} toggleTheme={toggleTheme} />
-        <main>
-            {showLandingPage ? (
-                <LandingPage toggleShowLandingPage={toggleShowLandingPage} />
-            ) : (
-                <FormContent toggleShowForm={toggleShowLandingPage} />
-            )
-            }
-        </main>
-        <Footer />
+            <Header isLightMode={isLightMode} toggleTheme={toggleTheme} />
+            <main>
+                {showLandingPage ? (
+                    <LandingPage toggleShowLandingPage={toggleShowLandingPage} />
+                ) : (
+                    <FormContent toggleShowForm={toggleShowLandingPage} />
+                )
+                }
+            </main>
+            <Footer />
         </>
     )
 }

@@ -1,16 +1,20 @@
 import "../styles/FormField.css";
 
 const FormField = ({ label, id, name, type, value, onChange }) => (
-    <div className={`form-field-container ${type === 'date' ? date-field-container : ''}`} >
-        <label htmlFor={id}>{label}</label>
-        {type === 'textarea' ? (
+    <>
+    {type === 'textarea' ? (
+        <div className='form-field-container'>
+            <label htmlFor={id}>{label}</label>
             <textarea 
                 id={id} 
                 name={name} 
                 value={value} 
                 onChange={onChange}
             />
-        ) : (
+        </div>
+    ) : type === 'date' ? (
+        <span className='date-field-container'>
+            <label htmlFor={id}>{label}</label>
             <input 
                 type={type} 
                 id={id} 
@@ -18,8 +22,20 @@ const FormField = ({ label, id, name, type, value, onChange }) => (
                 value={value} 
                 onChange={onChange}
             />
-        )}
-    </div>
+        </span>
+    ) : (
+        <div className='form-field-container'>
+            <label htmlFor={id}>{label}</label>
+            <input 
+                type={type} 
+                id={id} 
+                name={name} 
+                value={value} 
+                onChange={onChange}
+            /> 
+        </div>
+    )}
+    </>
 );
 
 export default FormField;

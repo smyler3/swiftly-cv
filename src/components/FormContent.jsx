@@ -144,7 +144,7 @@ const FormContent = ({ toggleShowForm }) => {
     }, [handleSubmit, setCurrentStep, currentStep, toggleShowForm]);
 
     const formPages = [
-        <Form formData={localFormData} handleChange={handleChange} fields={personalFields} title={'PERSONAL DETAILS:'} formID={'personal'} isDynamic={true} />,
+        <Form formData={localFormData} handleChange={handleChange} fields={personalFields} title={'PERSONAL DETAILS:'} formID={'personal'} isDynamic={false} />,
         <Form formData={localFormData} handleChange={handleChange} fields={educationFields} title={'EDUCATION DETAILS:'} formID={'education'} isDynamic={true} handleDeleteSection={handleDeleteSection} handleAddSection={handleAddEducationSection} />,
         <Form formData={localFormData} handleChange={handleChange} fields={experienceFields} title={'EXPERIENCE DETAILS:'} formID={'experience'} isDynamic={true} handleDeleteSection={handleDeleteSection} handleAddSection={handleAddExperienceSection} />,
         // <PreviewPage formData={formData} />,
