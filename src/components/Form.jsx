@@ -1,63 +1,26 @@
-import { useState } from "react";
+import AddFormButton from "./AddFormButton";
+import FormSection from "./FormSection";
 import '../styles/Form.css';
-import Button from "./Button";
-import CloseIcon from "./CloseIcon";
 
-// Default delete form button paramaters
-const defaultDelFormBtn = {
-    'icon': <CloseIcon />,
-    'text': null,
-    'onClick': null,
-    'classNames': 'del-form-btn',
-}
-
-const FormField = ({ containerClassName, label, type, name }) => {
-    const [value, setValue] = useState('');
-
+const Form = ({ formData, handleChange, fields, title, formID, isDynamic, handleDeleteSection=null, handleAddSection=null }) => {
     return (
-        <div className={`form-field-container ${containerClassName ? containerClassName : ''}`}>
-            <label htmlFor={`${name}`}>{label}</label>
-            {type === 'textarea' ? (
-                <textarea 
-                    id={name} 
-                    name={name} 
-                    value={value} 
-                    onChange={(e) => setValue(e.target.value)} 
-                />
-            ) : (
-                <input 
-                    type={`${type}`} 
-                    id={`${name}`} 
-                    name={`${name}`} 
-                    value={value}
-                    onChange={(e) => setValue(e.target.value)}
-                />
-            )}
-        </div>
-    );
-}
-
-const Form = ({ fields, canDelete=true }) => {
-    return (
-        <div className={`form-wrapper ${canDelete ? 'deleteable-form-wrapper' : ''}`}>
-            {canDelete && (
-                <span className="del-form-btn-wrapper">
-                    <Button icon={defaultDelFormBtn.icon} text={defaultDelFormBtn.text} onClick={defaultDelFormBtn.onClick} classNames={defaultDelFormBtn.classNames} />
-                </span>
-            )}
-            <form action="" className="form">
-                {fields.map((field) => (
-                    <FormField
-                        key={field.name}
-                        containerClassName={field.containerClassName ? field.containerClassName : null}
-                        label={field.label}
-                        type={field.type}
-                        name={field.name}
+        <>
+            <h2 className="form-title">{title}</h2>
+            <form action="">
+                {formData.map((section) => (
+                    <FormSection 
+                        key={section.sectionID}
+                        sectionData={section} 
+                        fields={fields} 
+                        handleChange={handleChange} 
+                        isDeleteable={isDynamic} 
+                        handleDeleteSection={handleDeleteSection}
                     />
                 ))}
             </form>
-        </div>
+            {isDynamic && <AddFormButton onClick={() => handleAddSection(formID)} />}
+        </>
     )
-}
+};
 
 export default Form;

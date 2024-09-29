@@ -1,121 +1,8 @@
-import { useCallback, useState, useEffect } from "react";
-import AddCircleIcon from "./AddCircleIcon";
-import Button from "./Button";
+import { useCallback, useEffect, useState } from "react";
+import Form from "./Form";
 import ProgressTracker from "./ProgressTracker";
-import personIcon from '../assets/icons/personIcon.svg'
-import schoolIcon from '../assets/icons/schoolIcon.svg'
-import workIcon from '../assets/icons/workIcon.svg'
-import previewIcon from '../assets/icons/previewIcon.svg'
-
-const DeleteButton = ({ onClick }) => {
-    return (
-        <div className="del-form-section-btn-wrapper">
-            <Button onClick={onClick} classNames="delete-form-section-btn">
-                <div>
-                    <span>
-                        <CloseIcon />
-                    </span>
-                </div>
-            </Button> 
-        </div>
-    )
-};
-
-const AddFormButton = ({ onClick }) => {
-    return (
-        <Button onClick={onClick} classNames="add-form-section-btn" >
-            <div>
-                <span>
-                    <AddCircleIcon />
-                </span>
-                <span>
-                    Create New Section
-                </span>
-            </div>
-        </Button>
-    )
-};
-
-const NavigationButtons = ({ currentStep, steps, handleBackClick, handleContinueClick }) => {
-    return (
-        <div>
-            <span>
-                <Button onClick={handleBackClick}>
-                    <span>
-                        {currentStep === 0 ? 'EXIT' : 'BACK'}
-                    </span>
-                </Button>
-            </span>
-            <span>
-                <Button onClick={handleContinueClick}>
-                    <span>
-                        {currentStep === steps.length - 1 ? 'DONE' : 'SAVE & CONTINUE'}
-                    </span>
-                </Button>
-            </span>
-        </div>
-    )
-};
-
-const FormField = ({ label, id, name, type, value, onChange }) => (
-    <div className={`form-field-container ${type === 'date' ? date-field-container : ''}`} >
-        <label htmlFor={id}>{label}</label>
-        {type === 'textarea' ? (
-            <textarea 
-                id={id} 
-                name={name} 
-                value={value} 
-                onChange={onChange}
-            />
-        ) : (
-            <input 
-                type={type} 
-                id={id} 
-                name={name} 
-                value={value} 
-                onChange={onChange}
-            />
-        )}
-    </div>
-);
-
-const FormSection = ({ sectionData, fields, handleChange, isDeleteable, handleDeleteSection }) => (
-    <div className={`form-section ${isDeleteable ? 'deleteable-form-section' : ''}`}>
-        {isDeleteable && <DeleteButton onClick={() => handleDeleteSection(sectionData.sectionID)} />}
-        {fields.map(field => (
-            <FormField
-                key={field.name + sectionData.sectionID}
-                label={field.label}
-                id={field.name + sectionData.sectionID}
-                name={field.name}
-                type={field.type}
-                value={sectionData[field.name]}
-                onChange={(e) => handleChange(e, sectionData.sectionID)}
-            />
-        ))}
-    </div>
-);
-
-const Form = ({ formData, handleChange, fields, title, formID, isDynamic, handleDeleteSection=null, handleAddSection=null }) => {
-    return (
-        <>
-            <h2 className="form-title">{title}</h2>
-            <form action="">
-                {formData.map((section) => (
-                    <FormSection 
-                        key={section.sectionID}
-                        sectionData={section} 
-                        fields={fields} 
-                        handleChange={handleChange} 
-                        isDeleteable={isDynamic} 
-                        handleDeleteSection={handleDeleteSection}
-                    />
-                ))}
-            </form>
-            {isDynamic && <AddFormButton onClick={() => handleAddSection(formID)} />}
-        </>
-    )
-};
+import NavigationButtons from "./NavigationButtons";
+import "../styles/FormComponent.css";
 
 const personalFields = [
     {name: 'fullName', label: 'Full Name:', type: 'text'},
@@ -253,9 +140,9 @@ const FormContent = ({ toggleShowForm }) => {
     }, [handleSubmit, setCurrentStep, currentStep, toggleShowForm]);
 
     const formPages = [
-        <Form formData={localFormData} handleChange={handleChange} fields={personalFields} title={'PERSONAL DETAILS:'} formID={} isDynamic={true} />,
-        <Form formData={localFormData} handleChange={handleChange} fields={educationFields} title={'EDUCATION DETAILS:'} formID={} isDynamic={true} handleDeleteSection={handleDeleteSection} handleAddSection={handleAddEducationSection} />,
-        <Form formData={localFormData} handleChange={handleChange} fields={experienceFields} title={'EXPERIENCE DETAILS:'} formID={} isDynamic={true} handleDeleteSection={handleDeleteSection} handleAddSection={handleAddExperienceSection} />,
+        <Form formData={localFormData} handleChange={handleChange} fields={personalFields} title={'PERSONAL DETAILS:'} formID={'personal'} isDynamic={true} />,
+        <Form formData={localFormData} handleChange={handleChange} fields={educationFields} title={'EDUCATION DETAILS:'} formID={'education'} isDynamic={true} handleDeleteSection={handleDeleteSection} handleAddSection={handleAddEducationSection} />,
+        <Form formData={localFormData} handleChange={handleChange} fields={experienceFields} title={'EXPERIENCE DETAILS:'} formID={'experience'} isDynamic={true} handleDeleteSection={handleDeleteSection} handleAddSection={handleAddExperienceSection} />,
         // <PreviewPage formData={formData} />,
     ];
 
@@ -275,4 +162,4 @@ const FormContent = ({ toggleShowForm }) => {
     )
 };
 
-export default FormContent
+export default FormContent;

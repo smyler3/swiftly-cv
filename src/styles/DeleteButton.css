@@ -1,0 +1,25 @@
+.del-form-section-btn-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: self-end;
+
+    height: 20px;
+    width: 20px;
+}
+
+.del-form-section-btn {
+    height: 100%;
+    width: auto;
+
+    fill: var(--delete-form-btn-colour);
+    border: none;
+    background: none;
+}
+
+.del-form-section-btn:hover > .btn-icon-wrapper > svg {
+    fill: var(--delete-form-btn-hover-colour);
+}
+.del-form-section-btn:active > .btn-icon-wrapper > svg {
+    fill: var(--delete-form-btn-active-colour);
+}

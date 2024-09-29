@@ -17,8 +17,8 @@
   --primary-300: #00A7CC; /* Active/click state for primary elements */
   --primary-400: #07B8DF; /* A secondary brand color */
 
-  --moon-colour: #87cefa; /* TODO */
-  --sun-colour: #fdc018; /* TODO */
+  --moon-colour: #87cefa;
+  --sun-colour: #fdc018;
 
   --red-100: #ff0800; /* Hover state for destructive actions */
   --red-200: #9e0000; /* Active state for destructive actions */
