@@ -43,8 +43,8 @@ const steps = [
 
 const FormContent = ({ toggleShowForm }) => {
     const [currentStep, setCurrentStep] = useState(0);
-    const [educationSectionCounter, setEducationSectionCounter] = useState(0);
-    const [experienceSectionCounter, setExperienceSectionCounter] = useState(0);
+    const [educationSectionCounter, setEducationSectionCounter] = useState(1);
+    const [experienceSectionCounter, setExperienceSectionCounter] = useState(1);
     const [formData, setFormData] = useState(
         {
             'personal': [
@@ -54,10 +54,16 @@ const FormContent = ({ toggleShowForm }) => {
                 }, { sectionID: 0 })
             ],
             'education': [
-                // Sections will be added dynamically
+                educationFields.reduce((section, field) => {
+                    section[field.name] = '';
+                    return section;
+                }, { sectionID: 0 })
             ],
             'experience': [
-                // Sections will be added dynamically
+                experienceFields.reduce((section, field) => {
+                    section[field.name] = '';
+                    return section;
+                }, { sectionID: 0 })
             ]
         }
     );
