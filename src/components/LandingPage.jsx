@@ -27,7 +27,7 @@ const LandingPage = ({ toggleShowLandingPage }) => {
     return (
         <div className="content-page landing-page">
             <h2 className="page-title">Create your own custom resume in seconds</h2>
-            <Button onClick={toggleShowLandingPage} classNames={"btn-default"} >
+            <Button onClick={toggleShowLandingPage} classNames={"default-btn"} >
                 <p>
                     GET STARTED
                 </p>
@@ -38,7 +38,7 @@ const LandingPage = ({ toggleShowLandingPage }) => {
                 })}
             </div>
             <div className="btn-wrapper">
-                <Button onClick={toggleShowLandingPage} classNames={"btn-default"} >
+                <Button onClick={toggleShowLandingPage} classNames={"default-btn"} >
                     <p>
                         CREATE NOW
                     </p>

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import Form from "./Form";
 import ProgressTracker from "./ProgressTracker";
 import NavigationButtons from "./NavigationButtons";
@@ -69,10 +69,6 @@ const FormContent = ({ toggleShowForm }) => {
     );
     const [localFormData, setLocalFormData] = useState(formData[steps[currentStep].formID]);
 
-    useEffect(() => {
-        setLocalFormData(formData[steps[currentStep].formID]);
-    }, [currentStep, formData]);
-
     const addFormSection = (setCounter, counter, fields) => {
         const newSection = fields.reduce((newSection, field) => {
             newSection[field.name] = '';
@@ -99,7 +95,7 @@ const FormContent = ({ toggleShowForm }) => {
     }, [setLocalFormData]);
 
     const handleSubmit = () => {
-        const formKey = steps[currentStep];
+        const formKey = steps[currentStep].formID;
         setFormData((prev) => ({
             ...prev,
             [formKey]: localFormData
@@ -108,7 +104,11 @@ const FormContent = ({ toggleShowForm }) => {
 
     const handleBackClick = useCallback(() => {
         if (currentStep > 0) {
-            setCurrentStep(prev => prev - 1);
+            const prevStep = currentStep - 1;
+            const prevFormData = formData[steps[prevStep].formID];
+
+            setCurrentStep(prevStep);
+            setLocalFormData(prevFormData);
         }
         else {
             setCurrentStep(0);
@@ -140,7 +140,11 @@ const FormContent = ({ toggleShowForm }) => {
     const handleContinueClick = useCallback(() => {
         handleSubmit(); 
         if (currentStep < steps.length - 1) {
-            setCurrentStep(prev => prev + 1);
+            const nextStep = currentStep + 1;
+            const nextFormData = formData[steps[nextStep].formID];
+
+            setCurrentStep(nextStep);
+            setLocalFormData(nextFormData);
         }
         else {
             setCurrentStep(0);
@@ -150,9 +154,9 @@ const FormContent = ({ toggleShowForm }) => {
     }, [handleSubmit, setCurrentStep, currentStep, toggleShowForm]);
 
     const formPages = [
-        <Form formData={localFormData} handleChange={handleChange} fields={personalFields} title={'PERSONAL DETAILS:'} formID={'personal'} isDynamic={false} />,
-        <Form formData={localFormData} handleChange={handleChange} fields={educationFields} title={'EDUCATION DETAILS:'} formID={'education'} isDynamic={true} handleDeleteSection={handleDeleteSection} handleAddSection={handleAddEducationSection} />,
-        <Form formData={localFormData} handleChange={handleChange} fields={experienceFields} title={'EXPERIENCE DETAILS:'} formID={'experience'} isDynamic={true} handleDeleteSection={handleDeleteSection} handleAddSection={handleAddExperienceSection} />,
+        <Form formData={localFormData} handleChange={handleChange} fields={personalFields} title={'PERSONAL DETAILS:'} formID={steps[0].formID} isDynamic={false} />,
+        <Form formData={localFormData} handleChange={handleChange} fields={educationFields} title={'EDUCATION DETAILS:'} formID={steps[1].formID} isDynamic={true} handleDeleteSection={handleDeleteSection} handleAddSection={handleAddEducationSection} />,
+        <Form formData={localFormData} handleChange={handleChange} fields={experienceFields} title={'EXPERIENCE DETAILS:'} formID={steps[2].formID} isDynamic={true} handleDeleteSection={handleDeleteSection} handleAddSection={handleAddExperienceSection} />,
         // <PreviewPage formData={formData} />,
     ];
 

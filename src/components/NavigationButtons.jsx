@@ -16,7 +16,7 @@ const NavigationButtons = ({ currentStep, steps, handleBackClick, handleContinue
                 </Button>
             </span>
             <span>
-                <Button onClick={handleContinueClick} classNames='btn-default'>
+                <Button onClick={handleContinueClick} classNames='default-btn'>
                     <div>
                         {currentStep === steps.length - 1 ? 'DONE' : 'SAVE & CONTINUE'}
                     </div>

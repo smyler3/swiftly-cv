@@ -43,7 +43,7 @@ button {
     cursor: pointer;
 }
 
-.btn-default {
+.default-btn {
     width: 135px;
 
     padding: 5px 15px;
@@ -51,9 +51,9 @@ button {
     color: var(--default-btn-colour);
     background-color: var(--default-btn-background);
 }
-.btn-default:hover {
+.default-btn:hover {
     background-color: var(--default-btn-hover-background);
 }
-.btn-default:active {
+.default-btn:active {
     background-color: var(--default-btn-active-background);
 }
