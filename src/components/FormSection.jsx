@@ -1,8 +1,9 @@
 import "../styles/FormSection.css";
 import FormField from "./FormField";
 import DeleteButton from "./DeleteButton";
+import { memo } from "react";
 
-const FormSection = ({ sectionData, fields, handleChange, isDeleteable, handleDeleteSection }) => (
+const FormSection = memo(({ sectionData, fields, handleChange, isDeleteable, handleDeleteSection }) => (
     <div className={`form-section ${isDeleteable ? 'deleteable-form-section' : ''}`}>
         {isDeleteable && <DeleteButton onClick={() => handleDeleteSection(sectionData.sectionID)} />}
         {fields.map(field => (
@@ -17,6 +18,6 @@ const FormSection = ({ sectionData, fields, handleChange, isDeleteable, handleDe
             />
         ))}
     </div>
-);
+));
 
 export default FormSection;

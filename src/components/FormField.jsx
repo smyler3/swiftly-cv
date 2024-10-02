@@ -1,6 +1,7 @@
+import { memo } from "react";
 import "../styles/FormField.css";
 
-const FormField = ({ label, id, name, type, value, onChange }) => {
+const FormField = memo(({ label, id, name, type, value, onChange }) => {
     return (
         <>
         {type === 'textarea' ? (
@@ -38,6 +39,6 @@ const FormField = ({ label, id, name, type, value, onChange }) => {
         )}
         </>
     );
-};
+});
 
 export default FormField;

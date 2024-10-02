@@ -1,8 +1,9 @@
 import CloseIcon from "./CloseIcon";
 import Button from "./Button";
 import "../styles/DeleteButton.css";
+import { memo } from "react";
 
-const DeleteButton = ({ onClick }) => {
+const DeleteButton = memo(({ onClick }) => {
     return (
         <div className="delete-form-section-btn-wrapper">
             <Button onClick={onClick} classNames="del-form-section-btn">
@@ -12,6 +13,6 @@ const DeleteButton = ({ onClick }) => {
             </Button>
         </div> 
     )
-};
+});
 
 export default DeleteButton;

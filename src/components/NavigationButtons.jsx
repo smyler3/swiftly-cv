@@ -1,8 +1,9 @@
 import Button from "./Button";
 import BackIcon from "./BackIcon";
 import "../styles/NavigationButtons.css";
+import { memo } from "react";
 
-const NavigationButtons = ({ currentStep, steps, handleBackClick, handleContinueClick }) => {
+const NavigationButtons = memo(({ currentStep, steps, handleBackClick, handleContinueClick }) => {
     return (
         <div className="nav-buttons-wrapper">
             <span>
@@ -24,6 +25,6 @@ const NavigationButtons = ({ currentStep, steps, handleBackClick, handleContinue
             </span>
         </div>
     )
-};
+});
 
 export default NavigationButtons;

@@ -1,8 +1,9 @@
 import AddFormButton from "./AddFormButton";
 import FormSection from "./FormSection";
 import '../styles/Form.css';
+import { memo } from "react";
 
-const Form = ({ formData, handleChange, fields, title, formID, isDynamic, handleDeleteSection=null, handleAddSection=null }) => {
+const Form = memo(({ formData, handleChange, fields, title, formID, isDynamic, handleDeleteSection=null, handleAddSection=null }) => {
     return (
         <>
             <h2 className="form-title">{title}</h2>
@@ -21,6 +22,6 @@ const Form = ({ formData, handleChange, fields, title, formID, isDynamic, handle
             {isDynamic && <AddFormButton onClick={() => handleAddSection(formID)} />}
         </>
     )
-};
+});
 
 export default Form;

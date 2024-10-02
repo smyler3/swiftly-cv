@@ -1,4 +1,5 @@
-import '../styles/ProgressTracker.css'
+import { memo } from 'react';
+import '../styles/ProgressTracker.css';
 
 const StepMarker = ({ label, icon, altText, isActive, isComplete }) => {
     return (
@@ -21,7 +22,7 @@ const ProgressBar = ({ currentStep, totalSteps }) => {
     );
 };
 
-const ProgressTracker = ({ steps, currentStep=0 }) => {
+const ProgressTracker = memo(({ steps, currentStep=0 }) => {
     // Render nothing if steps is empty
     if (steps.length === 0) {
         return null;
@@ -44,6 +45,6 @@ const ProgressTracker = ({ steps, currentStep=0 }) => {
             <ProgressBar currentStep={currentStep} totalSteps={steps.length}/>
         </section>
     )
-};
+});
 
 export default ProgressTracker;
