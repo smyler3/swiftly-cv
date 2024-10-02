@@ -1,0 +1,48 @@
+.form-field-container,
+.date-field-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: start;
+}
+
+.form-field-container {
+    grid-column: span 2;
+}
+
+
+label {
+    align-self: flex-start;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--form-label-colour);
+}
+
+input{
+    height: var(--input-field-height);
+}
+
+textarea {
+    height: calc(3 * var(--input-field-height));
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 8px 8px;
+
+    color: var(--form-input-colour);
+    border: 1px solid var(--form-input-border);
+    border-radius: 5px;
+    background-color: var(--form-input-background);
+
+    /* Remove default styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input:focus-visible,
+textarea:focus-visible {
+    border-color: var(--form-input-focus-border);
+    outline: 1px solid var(--form-input-focus-outline);
+}

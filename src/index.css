@@ -17,8 +17,8 @@
   --primary-300: #00A7CC; /* Active/click state for primary elements */
   --primary-400: #07B8DF; /* A secondary brand color */
 
-  --moon-colour: #87cefa; /* TODO */
-  --sun-colour: #fdc018; /* TODO */
+  --moon-colour: #87cefa;
+  --sun-colour: #fdc018;
 
   --red-100: #ff0800; /* Hover state for destructive actions */
   --red-200: #9e0000; /* Active state for destructive actions */
@@ -78,9 +78,9 @@ body {
   --delete-form-btn-hover-colour: var(--red-100);
   --delete-form-btn-active-colour: var(--red-200);
 
-  --add-form-btn-colour: var(--primary-100);
-  --add-form-btn-hover-colour: var(--primary-200);
-  --add-form-btn-active-colour: var(--primary-300);
+  --add-form-section-btn-colour: var(--primary-100);
+  --add-form-section-btn-hover-colour: var(--primary-200);
+  --add-form-section-btn-active-colour: var(--primary-300);
 
   --toggle-theme-btn-colour: var(--grey-300);
 

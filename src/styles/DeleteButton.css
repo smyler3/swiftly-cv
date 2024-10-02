@@ -1,0 +1,25 @@
+.delete-form-section-btn-wrapper {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.del-form-section-btn {
+    border: none;
+    background: none;
+}
+
+.del-form-section-btn > .icon-wrapper {
+    height: 25px;
+    width: 25px;
+}
+
+.del-form-section-btn > .icon-wrapper > svg {
+    fill: var(--delete-form-btn-colour);
+}
+.del-form-section-btn:hover > .icon-wrapper > svg {
+    fill: var(--delete-form-btn-hover-colour);
+}
+.del-form-section-btn:active > .icon-wrapper > svg {
+    fill: var(--delete-form-btn-active-colour);
+}

@@ -1,23 +1,27 @@
-.add-form-btn > .btn-icon-wrapper {
+.add-form-section-btn {
+    align-self: self-start;
+
+    font-size: 23px;
+    color: var(--add-form-section-btn-colour);
+}
+.add-form-section-btn:hover {
+    color: var(--add-form-section-btn-hover-colour);
+}
+.add-form-section-btn:active {
+    color: var(--add-form-section-btn-active-colour);
+}
+
+.add-form-section-btn > .icon-wrapper {
     height: 25px;
     width: 25px;
 }
 
-.add-form-btn {
-    align-self: self-start;
-
-    font-size: 23px;
-    color: var(--add-form-btn-colour);
+.add-form-section-btn > .icon-wrapper > svg {
+    fill: var(--add-form-section-btn-colour);
 }
-.add-form-btn:hover {
-    color: var(--add-form-btn-hover-colour);
+.add-form-section-btn:hover > .icon-wrapper > svg {
+    fill: var(--add-form-section-btn-hover-colour);
 }
-.add-form-btn:hover > .btn-icon-wrapper > svg {
-    fill: var(--add-form-btn-hover-colour);
-}
-.add-form-btn:active {
-    color: var(--add-form-btn-active-colour);
-}
-.add-form-btn:active > .btn-icon-wrapper > svg {
-    fill: var(--add-form-btn-active-colour);
+.add-form-section-btn:active > .icon-wrapper > svg {
+    fill: var(--add-form-section-btn-active-colour);
 }

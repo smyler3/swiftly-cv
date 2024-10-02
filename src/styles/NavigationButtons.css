@@ -1,4 +1,4 @@
-.nav-btn-wrapper {
+.nav-buttons-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,26 +8,27 @@
     width: 100%;
 }
 
-.back-btn > .btn-icon-wrapper {
+.back-btn > .icon-wrapper {
     height: 30px;
     width: 30px;
+}
+
+.back-btn > .icon-wrapper > svg {
+    fill: var(--back-btn-colour);
+}
+.back-btn:hover > .icon-wrapper > svg {
+    fill: var(--back-btn-hover-colour);
+}
+.back-btn:active > .icon-wrapper > svg {
+    fill: var(--back-btn-active-colour);
 }
 
 .back-btn {
     color: var(--back-btn-colour);
 }
-.back-btn > .btn-icon-wrapper > svg {
-    fill: var(--back-btn-colour);
-}
 .back-btn:hover {
     color: var(--back-btn-hover-colour);
 }
-.back-btn:hover > .btn-icon-wrapper > svg {
-    fill: var(--back-btn-hover-colour);
-}
 .back-btn:active {
     color: var(--back-btn-active-colour);
-}
-.back-btn:active > .btn-icon-wrapper > svg {
-    fill: var(--back-btn-active-colour);
 }

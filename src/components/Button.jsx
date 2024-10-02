@@ -1,12 +1,12 @@
-import "../styles/Button.css"
+import { memo } from "react";
+import "../styles/Button.css";
 
-const Button = ({ icon=null, text=null, onClick, classNames, title=null, ariaLabel=null }) => {
+const Button = memo(({ onClick, classNames, children, title=null, ariaLabel=null }) => {
     return (
-        <button className={`${classNames ? classNames : ''} ${text && icon ? 'icon-and-text-btn' : ''}`} onClick={onClick} title={title} aria-label={ariaLabel}>
-            {icon && <span className="btn-icon-wrapper">{icon}</span>}
-            {text && <span className="text">{text}</span>}
+        <button className={`${classNames ? classNames : ''}`} onClick={onClick} title={title} aria-label={ariaLabel}>
+            {children}
         </button>
     )
-}
+});
 
 export default Button;

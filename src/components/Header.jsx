@@ -2,8 +2,9 @@ import "../styles/Header.css"
 import LightModeIcon from "./LightModeIcon";
 import DarkModeIcon from "./DarkModeIcon";
 import Button from "./Button";
+import { memo } from "react";
 
-const Header = ({ isLightMode=true, toggleTheme }) => {
+const Header = memo(({ isLightMode=true, toggleTheme }) => {
     return (
         <header>
             <div className="header-content">
@@ -15,6 +16,6 @@ const Header = ({ isLightMode=true, toggleTheme }) => {
             </div>
         </header>
     )
-};
+});
 
 export default Header;
