@@ -63,24 +63,31 @@ const PreviewPage = ({ data }) => {
                 </div>
 
                 <div className="page-subsection contact-info">
-                    {/* <h4 className="subsection-title">CONTACT ME</h4> */}
                     <div className="contact-details-list">
-                        <div className="contact-detail-item">
-                            <span className="contact-icon"><img src={`${phoneIcon}`} /></span>
-                            <p>{data.personal[0].phoneNumber}</p>
-                        </div>
-                        <div className="contact-detail-item">
-                            <span className="contact-icon"><img src={`${emailIcon}`} /></span>
-                            <p className="contact-text">{data.personal[0].email}</p>
-                        </div>
-                        <div className="contact-detail-item">
-                            <span className="contact-icon"><img src={`${locationIcon}`} /></span>
-                            <p className="contact-text">{data.personal[0].location}</p>
-                        </div>
-                        <div className="contact-detail-item">
-                            <span className="contact-icon"><img src={`${websiteIcon}`} /></span>
-                            <p className="contact-text">{data.personal[0].websiteLink}</p>
-                        </div>
+                        {data.personal[0].phoneNumber && 
+                            <div className="contact-detail-item">
+                                <span className="contact-icon"><img src={`${phoneIcon}`} /></span>
+                                <p>{data.personal[0].phoneNumber}</p>
+                            </div>
+                        }
+                        {data.personal[0].email && 
+                            <div className="contact-detail-item">
+                                <span className="contact-icon"><img src={`${emailIcon}`} /></span>
+                                <p className="contact-text">{data.personal[0].email}</p>
+                            </div>
+                        }
+                        {data.personal[0].location && 
+                            <div className="contact-detail-item">
+                                <span className="contact-icon"><img src={`${locationIcon}`} /></span>
+                                <p className="contact-text">{data.personal[0].location}</p>
+                            </div>
+                        }
+                        {data.personal[0].websiteLink && 
+                            <div className="contact-detail-item">
+                                <span className="contact-icon"><img src={`${websiteIcon}`} /></span>
+                                <p className="contact-text">{data.personal[0].websiteLink}</p>
+                            </div>
+                        }
                     </div>
                 </div>
 
