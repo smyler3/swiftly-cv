@@ -21,13 +21,16 @@ header {
     max-width: var(--max-content-width);
 }
 
-/* TODO: Remove background colour */
 .logo-container {
     height: 40px;
     width: 40px;
 
     border-radius: 50%;
-    background-color: lightgrey;
+}
+
+.logo-container > img {
+    height: 100%;
+    width: 100%;
 }
 
 .header-title {
