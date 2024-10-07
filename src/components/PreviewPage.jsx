@@ -53,8 +53,6 @@ const EducationItem = ({ data }) => {
 };
 
 const PreviewPage = ({ data }) => {
-    console.log(data);
-
     return (
         <>
             <h2 className="form-title">PREVIEW:</h2>
@@ -64,32 +62,31 @@ const PreviewPage = ({ data }) => {
                     <h5 className="profession">{data.personal[0].profession.toUpperCase()}</h5>
                 </div>
 
-                <div className="contact-about-section">
-                    <span className="page-subsection">
-                        <h4 className="subsection-title">CONTACT ME</h4>
-                        <div className="contact-details-list">
-                            <div className="contact-detail-item">
-                                <span className="contact-icon"><img src={`${phoneIcon}`} /></span>
-                                <p>{data.personal[0].phoneNumber}</p>
-                            </div>
-                            <div className="contact-detail-item">
-                                <span className="contact-icon"><img src={`${emailIcon}`} /></span>
-                                <p className="contact-text">{data.personal[0].email}</p>
-                            </div>
-                            <div className="contact-detail-item">
-                                <span className="contact-icon"><img src={`${locationIcon}`} /></span>
-                                <p className="contact-text">{data.personal[0].location}</p>
-                            </div>
-                            <div className="contact-detail-item">
-                                <span className="contact-icon"><img src={`${websiteIcon}`} /></span>
-                                <p className="contact-text">{data.personal[0].websiteLink}</p>
-                            </div>
+                <div className="page-subsection contact-info">
+                    {/* <h4 className="subsection-title">CONTACT ME</h4> */}
+                    <div className="contact-details-list">
+                        <div className="contact-detail-item">
+                            <span className="contact-icon"><img src={`${phoneIcon}`} /></span>
+                            <p>{data.personal[0].phoneNumber}</p>
                         </div>
-                    </span>
-                    <span className="page-subsection">
-                        <h4 className="subsection-title">ABOUT ME</h4>
-                        <p className="about-me-text">{data.personal[0].professionalSummary}</p>
-                    </span>
+                        <div className="contact-detail-item">
+                            <span className="contact-icon"><img src={`${emailIcon}`} /></span>
+                            <p className="contact-text">{data.personal[0].email}</p>
+                        </div>
+                        <div className="contact-detail-item">
+                            <span className="contact-icon"><img src={`${locationIcon}`} /></span>
+                            <p className="contact-text">{data.personal[0].location}</p>
+                        </div>
+                        <div className="contact-detail-item">
+                            <span className="contact-icon"><img src={`${websiteIcon}`} /></span>
+                            <p className="contact-text">{data.personal[0].websiteLink}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="page-subsection">
+                    <h4 className="subsection-title">ABOUT ME</h4>
+                    <p className="about-me-text">{data.personal[0].professionalSummary}</p>
                 </div>
 
                 <div className="page-subsection">
