@@ -12,7 +12,11 @@ const Header = memo(({ isLightMode=true, toggleTheme }) => {
                     <img src="" alt="" />
                 </span>
                 <h1 className="header-title">SWIFTLY CV</h1>
-                <Button icon={isLightMode ?  <DarkModeIcon /> : <LightModeIcon />} onClick={toggleTheme} classNames="theme-btn" title="Toggle light and dark mode" ariaLabel="Toggle light and dark mode" />
+                <Button onClick={toggleTheme} classNames="theme-btn" title="Toggle light and dark mode" ariaLabel="Toggle light and dark mode">
+                    <div className="icon-wrapper">
+                        {isLightMode ?  <DarkModeIcon /> : <LightModeIcon />} 
+                    </div>
+                </Button>
             </div>
         </header>
     )

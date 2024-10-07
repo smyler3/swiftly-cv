@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import Form from "./Form";
+import PreviewPage from "./PreviewPage";
 import ProgressTracker from "./ProgressTracker";
 import NavigationButtons from "./NavigationButtons";
 import personIcon from "../assets/icons/personIcon.svg";
@@ -150,14 +151,14 @@ const FormContent = ({ toggleShowForm }) => {
             setCurrentStep(0);
             toggleShowForm();
         }
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0 });
     }, [handleSubmit, setCurrentStep, currentStep, toggleShowForm]);
 
     const formPages = [
         <Form formData={localFormData} handleChange={handleChange} fields={personalFields} title={'PERSONAL DETAILS:'} formID={steps[0].formID} isDynamic={false} />,
         <Form formData={localFormData} handleChange={handleChange} fields={educationFields} title={'EDUCATION DETAILS:'} formID={steps[1].formID} isDynamic={true} handleDeleteSection={handleDeleteSection} handleAddSection={handleAddEducationSection} />,
         <Form formData={localFormData} handleChange={handleChange} fields={experienceFields} title={'EXPERIENCE DETAILS:'} formID={steps[2].formID} isDynamic={true} handleDeleteSection={handleDeleteSection} handleAddSection={handleAddExperienceSection} />,
-        // <PreviewPage formData={formData} />,
+        <PreviewPage data={formData} />,
     ];
 
     return (

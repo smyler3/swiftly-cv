@@ -35,17 +35,17 @@ header {
     font-weight: bold;
 }
 
-.theme-btn > .btn-icon-wrapper {
+.theme-btn > .icon-wrapper {
     height: 30px;
     width: 30px;
 }
 
-.theme-btn > .btn-icon-wrapper > svg {
+.theme-btn > .icon-wrapper > svg {
     fill: var(--toggle-theme-btn-colour);
 }
-.theme-btn:hover > .btn-icon-wrapper > svg {
+.theme-btn:hover > .icon-wrapper > svg {
     fill: var(--toggle-theme-hover-btn-colour);
 }
-.theme-btn:active > .btn-icon-wrapper > svg {
+.theme-btn:active > .icon-wrapper > svg {
     fill: var(--toggle-theme-active-btn-colour);
 }

@@ -45,6 +45,7 @@ button {
 
 .default-btn {
     width: 135px;
+    min-height: 46px;
 
     padding: 5px 15px;
     
