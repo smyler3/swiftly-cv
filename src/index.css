@@ -12,27 +12,27 @@
 
   --max-content-width: 500px;
 
-  --primary-100: #00d1ff; /* Main brand color */
-  --primary-200: #00B8E6; /* Hover state for primary elements */
-  --primary-300: #00A7CC; /* Active/click state for primary elements */
-  --primary-400: #07B8DF; /* A secondary brand color */
+  --primary-100: #00d1ff;
+  --primary-200: #00B8E6;
+  --primary-300: #00A7CC;
+  --primary-400: #07B8DF;
 
   --moon-colour: #87cefa;
   --sun-colour: #fdc018;
 
-  --red-100: #ff0800; /* Hover state for destructive actions */
-  --red-200: #9e0000; /* Active state for destructive actions */
+  --red-100: #ff0800;
+  --red-200: #9e0000;
 
-  --grey-100: #FCFCFC;  /* Lightest grey (used for backgrounds) */
-  --grey-200: #d9d9d9;  /* Slightly darker grey (e.g., form borders, tracker) */
-  --grey-300: #bbbbbb;  /* Medium-light grey (toggle theme button) */
-  --grey-400: #A6A6A6;  /* Slightly darker grey (back button hover) */
-  --grey-500: #767676;  /* Darker grey (form labels) */
-  --grey-600: #777777;  /* Dark grey (dark theme back button) */
-  --grey-700: #555555;  /* Darker grey (dark theme tracker incomplete) */
-  --grey-800: #444444;  /* Dark grey (dark theme form border) */
-  --grey-900: #333333;  /* Very dark grey (dark theme form input background) */
-  --grey-1000: #212121; /* Darkest grey (dark theme main background) */
+  --grey-100: #FCFCFC;
+  --grey-200: #d9d9d9;
+  --grey-300: #bbbbbb;
+  --grey-400: #A6A6A6; 
+  --grey-500: #767676; 
+  --grey-600: #777777;  
+  --grey-700: #555555; 
+  --grey-800: #444444;  
+  --grey-900: #333333; 
+  --grey-1000: #212121;
 
   --black: #000000;
   --white: #ffffff;
@@ -142,19 +142,3 @@ body.dark {
   --back-btn-colour: var(--grey-600);
   --back-btn-active-colour: var(--white);
 }
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-    --header-background-colour: white;
-    --main-background-colour: var(--grey-100);
-    --footer-background-colour: white;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
