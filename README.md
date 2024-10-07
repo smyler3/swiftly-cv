@@ -1,15 +1,9 @@
-# React + Vite
+# SWIFTLY CV
+A React application designed to allow the fast and customisable creation of a resume design
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-nav button transitions need to be smoother / removed?
-form creation/deletion non-static animations 
-    (and move page on form creation)?
-progress-tracker non-static animations???
-Date picker icons dark mode/text??
-textarea font
+Future Upgrades:
+    Add animations on form creation to have it dynamically appear into view and scroll the screen down so that it is view
+    Add animations on form deletion to have it dynamically disappear
+    Add animations to the progress tracker to dynamically transition between steps
+    Alter date picker icons to improve visibility in dark theme
+    Alter date picker and textarea font to match other input fields
